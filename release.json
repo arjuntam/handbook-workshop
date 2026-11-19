@@ -1,8 +1,17 @@
 {
-  "version": "1.3.6",
+  "version": "1.3.7",
   "package": {
-    "path": "downloads/handbook-workshop-v1.3.6.zip",
-    "bytes": 16529075,
-    "sha256": "0b9386f565f42593a399d1dac1898a9e1b02caa2d6e8e2006c3ceb3415482b05"
+    "path": "downloads/handbook-workshop-v1.3.7.zip",
+    "flavor": "shared",
+    "bytes": 1052898,
+    "sha256": "fffbc771c8bed1aa9020f4865a58bd5f06b0e73aabdaeb46cb75280801783828",
+    "upload_limit_bytes": 5242880,
+    "initial_font_download": true
+  },
+  "offline_package": {
+    "path": "downloads/handbook-workshop-v1.3.7-offline.zip",
+    "flavor": "offline",
+    "bytes": 16533453,
+    "sha256": "d00dc80a17c2aad0408017a65c944ae527a157dddf2b0e467af03b35ae90dd83"
   }
 }
