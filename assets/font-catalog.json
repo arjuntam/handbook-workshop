@@ -1,0 +1,48 @@
+{
+  "misans": {
+    "name": "MiSans",
+    "family": "MiSans",
+    "file": "MiSans-VF.ttf",
+    "format": "truetype",
+    "weight": "150 700",
+    "bytes": 20000736,
+    "sha256": "5daf8d5447bfd423cfdec94a0e07c53b205892223ccc6ea21b7b8a37248b44d9",
+    "urls": [
+      "https://arjuntam.github.io/handbook-workshop/assets/fonts/MiSans-VF.ttf"
+    ]
+  },
+  "source-han-sans": {
+    "name": "思源黑体",
+    "family": "Source Han Sans SC",
+    "file": "SourceHanSansSC-VF.otf.woff2",
+    "format": "woff2",
+    "weight": "250 900",
+    "bytes": 14270432,
+    "sha256": "085cc88c530b9c434165ab926f81608a55b24e60e05719f3d41340ac45d9c62f",
+    "license": "source-han-sans-LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/adobe-fonts/source-han-sans/a4f7cf94edfb9d7ffbdfc4841de276358bd7e0f2/Variable/WOFF2/OTF/SourceHanSansSC-VF.otf.woff2",
+    "license_url": "https://github.com/adobe-fonts/source-han-sans/blob/master/LICENSE.txt",
+    "urls": [
+      "https://arjuntam.github.io/handbook-workshop/assets/fonts/SourceHanSansSC-VF.otf.woff2",
+      "https://raw.githubusercontent.com/adobe-fonts/source-han-sans/a4f7cf94edfb9d7ffbdfc4841de276358bd7e0f2/Variable/WOFF2/OTF/SourceHanSansSC-VF.otf.woff2",
+      "https://fast-mirror.isrc.ac.cn/adobe-fonts/source-han-sans/Variable/WOFF2/OTF/SourceHanSansSC-VF.otf.woff2"
+    ]
+  },
+  "source-han-serif": {
+    "name": "思源宋体",
+    "family": "Source Han Serif SC",
+    "file": "SourceHanSerifSC-VF.otf.woff2",
+    "format": "woff2",
+    "weight": "250 900",
+    "bytes": 19747252,
+    "sha256": "3b9451444b4a3554ab061a43cb79dc11c72c0dbc381f148c56c542dca9c0a7e3",
+    "license": "source-han-serif-LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/adobe-fonts/source-han-serif/7889f11bf31170b5d092a083b357c8c8130f89e0/Variable/WOFF2/OTF/SourceHanSerifSC-VF.otf.woff2",
+    "license_url": "https://github.com/adobe-fonts/source-han-serif/blob/master/LICENSE.txt",
+    "urls": [
+      "https://arjuntam.github.io/handbook-workshop/assets/fonts/SourceHanSerifSC-VF.otf.woff2",
+      "https://raw.githubusercontent.com/adobe-fonts/source-han-serif/7889f11bf31170b5d092a083b357c8c8130f89e0/Variable/WOFF2/OTF/SourceHanSerifSC-VF.otf.woff2",
+      "https://fast-mirror.isrc.ac.cn/adobe-fonts/source-han-serif/Variable/WOFF2/OTF/SourceHanSerifSC-VF.otf.woff2"
+    ]
+  }
+}
