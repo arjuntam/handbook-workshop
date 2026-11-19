@@ -685,18 +685,24 @@ html.mobile-blocked body>*:not(.mobile-block){visibility:hidden!important}
 @media(hover:hover) and (pointer:fine){.resource-card{transition:transform .18s,box-shadow .18s}.resource-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift)}.resource-action:hover{border-color:var(--accent)}.resource-action.primary:hover{background:var(--accent)}}
 .portal-page{background:var(--surface)}
 .portal-topbar{display:flex;align-items:center;gap:1.25rem;padding:1rem 2rem;border-block-end:1px solid var(--border);background:var(--surface)}
-.portal-topbar span{color:var(--brand);font-size:1.0625rem;font-weight:700}
-.portal-hero{position:relative;isolation:isolate;text-align:center;padding:5.5rem 1.5rem 5rem;background:var(--flow-paper);overflow:clip}
+.portal-topbar span{color:var(--brand);font-size:1.0625rem;font-weight:500}
+.portal-hero{position:relative;isolation:isolate;text-align:center;padding:6.5rem 1.5rem 5.5rem;background:var(--flow-paper);overflow:clip}
 .portal-hero .cover-fluid{position:absolute;z-index:-1}
 .portal-hero .cover-motion-toggle{position:absolute}
-.portal-hero h1{font-size:clamp(2rem,1.5rem + 2vw,3.5rem);line-height:1.2;margin:1rem 0 1.5rem;color:var(--brand);text-wrap:balance}
-.portal-kicker{color:var(--accent);font-size:.875rem}
-.portal-hero p{font-size:1.125rem;line-height:1.8;color:var(--muted);max-inline-size:48rem;margin:auto}
-.portal-wrap{max-inline-size:74rem;padding:0 1.5rem 4rem;margin-inline:auto;position:relative}
-.portal-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr));gap:1rem;margin-block:-2.5rem 3.5rem}
-.portal-step{background:var(--surface);border:1px solid var(--border);border-radius:1rem;padding:1.25rem;display:flex;align-items:flex-start;gap:.875rem;box-shadow:var(--shadow)}
-.portal-step b{font-size:.9375rem;line-height:1.5}.portal-step p{font-size:.875rem;color:var(--muted);margin:.25rem 0 0}
-.portal-step-num{min-inline-size:2rem;min-block-size:2rem;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent)}
+.portal-hero::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(color-mix(in srgb,var(--accent) 4.5%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--accent) 4.5%,transparent) 1px,transparent 1px);background-size:4rem 4rem;mask-image:radial-gradient(ellipse 58% 66% at 50% 44%,#000 10%,transparent 76%)}
+.portal-hero-inner{position:relative;z-index:1;inline-size:100%;max-inline-size:53.75rem;margin-inline:auto;text-align:center}
+/* Own the complete title box: shared cover h1 limits must not offset a portal. */
+.portal-hero .portal-hero-inner>h1{inline-size:100%;max-inline-size:none;font-size:clamp(2.125rem,4.4vw,3.5rem);font-weight:500;line-height:1.12;letter-spacing:-.022em;margin:0 auto 1.25rem;color:var(--brand);text-align:center;text-wrap:balance}
+.portal-kicker{display:inline-flex;align-items:center;gap:.5rem;max-inline-size:100%;color:var(--accent);font-size:.78125rem;font-weight:400;line-height:1.6;background:var(--accent-soft);border:1px solid var(--border);padding:.4375rem .9375rem;border-radius:99px;margin-block-end:1.625rem}
+.portal-kicker::before{content:"";flex:none;inline-size:.3125rem;block-size:.3125rem;border-radius:50%;background:currentColor}
+.portal-hero .portal-hero-inner>p{font-size:clamp(.9375rem,1.5vw,1.1875rem);font-weight:330;line-height:1.65;color:var(--muted);max-inline-size:none;margin:0 auto;text-align:center}
+.portal-wrap{max-inline-size:70rem;padding:0 1.5rem 4rem;margin-inline:auto;position:relative}
+.portal-steps{display:flex;align-items:stretch;gap:.75rem;max-inline-size:62.5rem;margin:-2.75rem auto 5.25rem;position:relative;z-index:1}
+.portal-step{flex:1 1 0;min-inline-size:0;background:var(--surface);border:1px solid var(--border);border-radius:1rem;padding:1.125rem 1.25rem;display:flex;align-items:center;gap:.875rem;box-shadow:var(--shadow)}
+.portal-step>div{min-inline-size:0}
+.portal-step b{display:block;font-size:.90625rem;font-weight:500;line-height:1.4}.portal-step p{font-size:.8125rem;color:var(--muted);line-height:1.5;margin:.1875rem 0 0}
+.portal-step-num{flex:none;inline-size:1.75rem;block-size:1.75rem;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font-size:.8125rem;font-weight:500;line-height:1}
+.portal-step-arrow{align-self:center;flex:none;color:var(--border);font-size:1.0625rem;line-height:1}
 .portal-wrap h2{font-size:1rem;color:var(--muted);margin-block:0 1.25rem}
 .portal-footer{text-align:center;font-size:.875rem;color:var(--muted);padding:2.5rem 1.5rem}
 @media(max-width:600px){.portal-topbar{padding:1rem;gap:.75rem}.portal-hero{padding:5rem 1.5rem 4rem}.portal-wrap{padding-inline:1rem}.resource-body{padding:1.25rem}}
@@ -992,26 +998,32 @@ figure figcaption,.gallery-item figcaption{font-size:var(--fs-note)}
 @media(hover:hover) and (pointer:fine){.resource-card{transition:transform .18s,box-shadow .18s}.resource-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift)}.resource-action:hover{border-color:var(--accent)}.resource-action.primary:hover{background:var(--accent)}}
 .portal-page{background:var(--surface)}
 .portal-topbar{display:flex;align-items:center;gap:1.25rem;padding:1rem 2rem;border-block-end:1px solid var(--border);background:var(--surface)}
-.portal-topbar span{color:var(--brand);font-size:1.0625rem;font-weight:700}
-.portal-hero{position:relative;isolation:isolate;text-align:center;padding:5.5rem 1.5rem 5rem;background:var(--flow-paper);overflow:clip}
+.portal-topbar span{color:var(--brand);font-size:1.0625rem;font-weight:500}
+.portal-hero{position:relative;isolation:isolate;text-align:center;padding:6.5rem 1.5rem 5.5rem;background:var(--flow-paper);overflow:clip}
 .portal-hero .cover-fluid{position:absolute;z-index:-1}
 .portal-hero .cover-motion-toggle{position:absolute}
-.portal-hero h1{font-size:clamp(2rem,1.5rem + 2vw,3.5rem);line-height:1.2;margin:1rem 0 1.5rem;color:var(--brand);text-wrap:balance}
-.portal-kicker{color:var(--accent);font-size:.875rem}
-.portal-hero p{font-size:1.125rem;line-height:1.8;color:var(--muted);max-inline-size:48rem;margin:auto}
-.portal-wrap{max-inline-size:74rem;padding:0 1.5rem 4rem;margin-inline:auto;position:relative}
-.portal-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr));gap:1rem;margin-block:-2.5rem 3.5rem}
-.portal-step{background:var(--surface);border:1px solid var(--border);border-radius:1rem;padding:1.25rem;display:flex;align-items:flex-start;gap:.875rem;box-shadow:var(--shadow)}
-.portal-step b{font-size:.9375rem;line-height:1.5}.portal-step p{font-size:.875rem;color:var(--muted);margin:.25rem 0 0}
-.portal-step-num{min-inline-size:2rem;min-block-size:2rem;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent)}
+.portal-hero::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(color-mix(in srgb,var(--accent) 4.5%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--accent) 4.5%,transparent) 1px,transparent 1px);background-size:4rem 4rem;mask-image:radial-gradient(ellipse 58% 66% at 50% 44%,#000 10%,transparent 76%)}
+.portal-hero-inner{position:relative;z-index:1;inline-size:100%;max-inline-size:53.75rem;margin-inline:auto;text-align:center}
+/* Own the complete title box: shared cover h1 limits must not offset a portal. */
+.portal-hero .portal-hero-inner>h1{inline-size:100%;max-inline-size:none;font-size:clamp(2.125rem,4.4vw,3.5rem);font-weight:500;line-height:1.12;letter-spacing:-.022em;margin:0 auto 1.25rem;color:var(--brand);text-align:center;text-wrap:balance}
+.portal-kicker{display:inline-flex;align-items:center;gap:.5rem;max-inline-size:100%;color:var(--accent);font-size:.78125rem;font-weight:400;line-height:1.6;background:var(--accent-soft);border:1px solid var(--border);padding:.4375rem .9375rem;border-radius:99px;margin-block-end:1.625rem}
+.portal-kicker::before{content:"";flex:none;inline-size:.3125rem;block-size:.3125rem;border-radius:50%;background:currentColor}
+.portal-hero .portal-hero-inner>p{font-size:clamp(.9375rem,1.5vw,1.1875rem);font-weight:330;line-height:1.65;color:var(--muted);max-inline-size:none;margin:0 auto;text-align:center}
+.portal-wrap{max-inline-size:70rem;padding:0 1.5rem 4rem;margin-inline:auto;position:relative}
+.portal-steps{display:flex;align-items:stretch;gap:.75rem;max-inline-size:62.5rem;margin:-2.75rem auto 5.25rem;position:relative;z-index:1}
+.portal-step{flex:1 1 0;min-inline-size:0;background:var(--surface);border:1px solid var(--border);border-radius:1rem;padding:1.125rem 1.25rem;display:flex;align-items:center;gap:.875rem;box-shadow:var(--shadow)}
+.portal-step>div{min-inline-size:0}
+.portal-step b{display:block;font-size:.90625rem;font-weight:500;line-height:1.4}.portal-step p{font-size:.8125rem;color:var(--muted);line-height:1.5;margin:.1875rem 0 0}
+.portal-step-num{flex:none;inline-size:1.75rem;block-size:1.75rem;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font-size:.8125rem;font-weight:500;line-height:1}
+.portal-step-arrow{align-self:center;flex:none;color:var(--border);font-size:1.0625rem;line-height:1}
 .portal-wrap h2{font-size:1rem;color:var(--muted);margin-block:0 1.25rem}
 .portal-footer{text-align:center;font-size:.875rem;color:var(--muted);padding:2.5rem 1.5rem}
 @media(max-width:600px){.portal-topbar{padding:1rem;gap:.75rem}.portal-hero{padding:5rem 1.5rem 4rem}.portal-wrap{padding-inline:1rem}.resource-body{padding:1.25rem}}
 :root{--brand:#0B1B2B;--brand2:#0A6ED1;--accent:#0A6ED1;--accent-soft:#EAF4FE;--bg:#F7F9FC;--surface:#FFFFFF;--text:#1E2D3D;--muted:#526579;--border:#E8EDF3;--selected-bg:#EAF4FE;--selected-border:#0A6ED1;--selected-text:#0B1B2B;--selected-shadow:0 0 0 2px #0A6ED1;--focus:#0A6ED1;--sans:"MiSans",sans-serif;--table-head-bg:#EAF4FE;--table-head-text:#0B1B2B;--nav-bg:#F7F9FC;--nav-bg2:#F7F9FC;--nav-text:#0B1B2B;--nav-muted:#526579;--nav-active-bg:#EAF4FE;--nav-active-text:#0A6ED1;--nav-line:#E8EDF3;--logo-header-height:28px;--logo-cover-height:48px;--fs-cover:2.5rem;--fs-title:1.75rem;--fs-h3:1.3125rem;--fs-cardtitle:1.1875rem;--fs-body:1.0625rem;--flow-one:#c4dcf4;--flow-two:#ddebf9;--flow-three:#e9f2fb;--flow-paper:#f9fbfe;}</style></head>
 <body class="portal-page"><header class="portal-topbar"><img class="brand-logo" src="assets/logo.png" alt="大金 DAIKIN"><span>城市合伙人 · 资料中心</span></header>
 <div class="portal-hero cover-fluid-mode"><div class="cover-fluid" aria-hidden="true"><div class="flow-field flow-one"></div><div class="flow-field flow-two"></div><div class="flow-field flow-three"></div><div class="flow-sweep"></div></div>
-<button type="button" class="cover-motion-toggle">暂停动态</button><span class="portal-kicker">P09 项目资料中心 · 样式示例</span><h1>城市合伙人 · 资料中心</h1><p>一份讲清价值、一份教落地执行、一份给可复用版式。</p></div>
-<main class="portal-wrap"><div class="portal-steps"><div class="portal-step"><span class="portal-step-num">1</span><div><b>招商讲价值</b><p>让读者理解项目</p></div></div><div class="portal-step"><span class="portal-step-num">2</span><div><b>启动教执行</b><p>按步骤查阅和使用</p></div></div><div class="portal-step"><span class="portal-step-num">3</span><div><b>现场用模板</b><p>资料集中下载与替换</p></div></div></div><h2>资料入口</h2><div class="resource-grid"><article class="resource-card"><div class="resource-cover"><img src="assets/partner.svg" alt="" loading="lazy" decoding="async"></div><div class="resource-body"><span class="resource-tag">面向业务团队与经销商</span><h3>招商宣讲手册</h3><p class="resource-desc">讲清项目价值与合作方式。此入口展示统一封面卡片样式。</p><ul><li>明确资料对象</li><li>按用途选择手册</li></ul><div class="resource-actions"><a class="resource-action primary" href="示例招商手册.html">查看手册示例<span aria-hidden="true">→</span></a></div></div></article><article class="resource-card"><div class="resource-cover"><img src="assets/flow.svg" alt="" loading="lazy" decoding="async"></div><div class="resource-body"><span class="resource-tag">面向门店执行人员</span><h3>启动会执行手册</h3><p class="resource-desc">把准备、执行与复盘组织为可查阅的动作清单。</p><ul><li>场景与步骤对应</li><li>配套资料入口一致</li></ul><div class="resource-actions"><a class="resource-action primary" href="示例执行手册.html">查看手册示例<span aria-hidden="true">→</span></a></div></div></article><article class="resource-card"><div class="resource-cover"><img src="assets/template.svg" alt="" loading="lazy" decoding="async"></div><div class="resource-body"><span class="resource-tag">配套模板与附件</span><h3>现场会模板与清单</h3><p class="resource-desc">同一张卡片可有多个明确动作，不将整卡导航与内部按钮嵌套。</p><ul><li>按钮底部对齐</li><li>区分阅读、下载和外链</li></ul><div class="resource-actions"><a class="resource-action secondary" href="assets/示例字段清单.txt" download>下载示例替换清单<span aria-hidden="true">↓</span></a><a class="resource-action primary" href="project-portal.json">查看入口配置<span aria-hidden="true">→</span></a></div></div></article></div></main><footer class="portal-footer">本作品使用 MiSans 字体 · 本页为样式示例，未上线</footer><script>
+<button type="button" class="cover-motion-toggle">暂停动态</button><div class="portal-hero-inner"><span class="portal-kicker">大金新零售 · 城市合伙人项目</span><h1>城市合伙人 · 资料中心</h1><p>一份讲清价值、一份教落地执行、一份给可复用版式。</p></div></div>
+<main class="portal-wrap"><div class="portal-steps"><div class="portal-step"><span class="portal-step-num">1</span><div><b>总部招商讲价值</b><p>让门店看懂项目、愿意入局</p></div></div><span class="portal-step-arrow" aria-hidden="true">→</span><div class="portal-step"><span class="portal-step-num">2</span><div><b>门店启动教执行</b><p>让团队照着话术和流程落地</p></div></div><span class="portal-step-arrow" aria-hidden="true">→</span><div class="portal-step"><span class="portal-step-num">3</span><div><b>现场会用模板</b><p>换掉门店信息就能开一场</p></div></div></div><h2>资料入口</h2><div class="resource-grid"><article class="resource-card"><div class="resource-cover"><img src="assets/partner.svg" alt="" loading="lazy" decoding="async"></div><div class="resource-body"><span class="resource-tag">面向业务团队与经销商</span><h3>招商宣讲手册</h3><p class="resource-desc">讲清项目价值与合作方式。此入口展示统一封面卡片样式。</p><ul><li>明确资料对象</li><li>按用途选择手册</li></ul><div class="resource-actions"><a class="resource-action primary" href="示例招商手册.html">查看手册示例<span aria-hidden="true">→</span></a></div></div></article><article class="resource-card"><div class="resource-cover"><img src="assets/flow.svg" alt="" loading="lazy" decoding="async"></div><div class="resource-body"><span class="resource-tag">面向门店执行人员</span><h3>启动会执行手册</h3><p class="resource-desc">把准备、执行与复盘组织为可查阅的动作清单。</p><ul><li>场景与步骤对应</li><li>配套资料入口一致</li></ul><div class="resource-actions"><a class="resource-action primary" href="示例执行手册.html">查看手册示例<span aria-hidden="true">→</span></a></div></div></article><article class="resource-card"><div class="resource-cover"><img src="assets/template.svg" alt="" loading="lazy" decoding="async"></div><div class="resource-body"><span class="resource-tag">配套模板与附件</span><h3>现场会模板与清单</h3><p class="resource-desc">同一张卡片可有多个明确动作，不将整卡导航与内部按钮嵌套。</p><ul><li>按钮底部对齐</li><li>区分阅读、下载和外链</li></ul><div class="resource-actions"><a class="resource-action secondary" href="assets/示例字段清单.txt" download>下载示例替换清单<span aria-hidden="true">↓</span></a><a class="resource-action primary" href="project-portal.json">查看入口配置<span aria-hidden="true">→</span></a></div></div></article></div></main><footer class="portal-footer">本作品使用 MiSans 字体 · 本页为样式示例，未上线</footer><script>
 (function(){
  const ua=navigator.userAgent||'';
  const ipad=/iPad/i.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>0);
