@@ -754,7 +754,7 @@ body{font-weight:330}
 .skill-download-card p{margin-block:.5rem .875rem;font-size:.9375rem;color:var(--text)}
 .skill-download-card a{display:inline-flex;align-items:center;gap:.5rem;min-block-size:2.75rem;padding:.625rem 1rem;background:var(--accent);color:#fff;border-radius:.625rem;text-decoration:none;font-weight:430}
 .design-credit{font-size:.75rem;font-weight:330;line-height:1.8;color:var(--muted);margin-block:1.5rem .25rem}
-.design-credit span+span::before{content:" · ";padding-inline:.25rem}
+.design-credit:has(>.credit-date[hidden]){display:none}
 .design-credit [hidden]{display:none}
 .cover .design-credit{color:var(--cover-muted,var(--muted))}
 :root{--sidebar-width:16.5rem;--header-height:3.75rem;color-scheme:light;--cover-title-weight:500;--cover-description-weight:330}
@@ -1046,7 +1046,7 @@ body{background:var(--bg);color:var(--text)}
     <p>本页用于验证<span class="phrase-unit">资料中心</span>到子手册的完整入口。</p>
     <div class="cover-meta"></div>
     <div class="cover-actions"><button type="button" class="cover-start" id="cover-start">开始阅读 <span class="cs-arrow">→</span></button></div>
-    <div class="design-credit"><span>版本号 V1.3.4</span><span>设计者：吖君</span><span class="credit-date">更新日期：2026-11-19</span></div>
+    <div class="design-credit"><span class="credit-date">更新日期：2026-11-19</span></div>
   </div>
 </div>
 <header class="topbar" data-surface="light">
