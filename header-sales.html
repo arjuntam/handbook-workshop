@@ -734,7 +734,7 @@ body{font-weight:330}
 .design-credit span+span::before{content:" · ";padding-inline:.25rem}
 .design-credit [hidden]{display:none}
 .cover .design-credit{color:var(--cover-muted,var(--muted))}
-:root{color-scheme:light;--cover-title-weight:500;--cover-description-weight:330}
+:root{--sidebar-width:16.5rem;--header-height:3.75rem;color-scheme:light;--cover-title-weight:500;--cover-description-weight:330}
 .section h2,.section h3,.section h4{font-weight:550}
 .cover h1{font-weight:var(--cover-title-weight)}
 .cover p{font-weight:var(--cover-description-weight)}
@@ -755,26 +755,29 @@ html[data-shell=dark] .topbar{background:linear-gradient(105deg,var(--nav-bg),va
 .topbar[data-surface=dark] .search-box input:hover,.topbar[data-surface=dark] .home-btn:hover{background:var(--header-control-hover);border-color:var(--nav-muted)}
 .topbar[data-surface=dark] .search-box input:focus{background:var(--header-control-hover);border-color:var(--nav-active-text);box-shadow:none;outline:none}
 .topbar[data-surface=dark] .search-box input:focus-visible,.topbar[data-surface=dark] .home-btn:focus-visible{outline:1.5px solid var(--nav-active-text);outline-offset:2px;box-shadow:none}
-html[data-shell=dark] body.viewing{background:linear-gradient(90deg,var(--nav-bg) 0 16.5rem,var(--bg) 16.5rem 100%);min-block-size:100dvh}
+body.viewing{background:linear-gradient(90deg,var(--nav-bg) 0 var(--sidebar-width),var(--bg) var(--sidebar-width) 100%);min-block-size:100dvh}
 @media(forced-colors:active){.topbar[data-surface=dark] :is(input,.home-btn):focus-visible{outline:2px solid Highlight}}
 html[data-shell=dark] .topbar-title .project-name{color:var(--nav-text)}
 html[data-shell=dark] .topbar-title .document-name{color:var(--nav-muted)}
-html[data-shell=dark] .layout{max-width:none;grid-template-columns:16.5rem minmax(0,1fr);gap:0;padding:0 0 6rem}
-html[data-shell=dark] .sidebar{position:fixed;inset-inline-start:0;top:60px;bottom:0;inline-size:16.5rem;max-block-size:calc(100dvh - 60px);border-radius:0;padding:1.5rem 1.125rem;background:var(--nav-bg);color-scheme:dark;color:var(--nav-text);block-size:calc(100dvh - 60px);scrollbar-color:var(--nav-muted) transparent}
-html[data-shell=dark] .layout>main{grid-column:2;inline-size:100%;max-inline-size:86rem;margin-inline:auto;padding:2rem clamp(1.5rem,3vw,3rem)}
-html[data-shell=dark] .sidebar .nav-group{border:0;margin-block-end:.375rem;padding-block-end:0}
-html[data-shell=dark] .sidebar .nav-group summary{border:0;border-radius:0;background:transparent}
-html[data-shell=dark] .sidebar .nav-group-title{padding:.625rem .75rem}
-html[data-shell=dark] .sidebar .nav-link.nav-bare{padding:.625rem .75rem;border:0;border-radius:.5rem;margin-block-end:.375rem}
-html[data-shell=dark] .sidebar .nav-group-links{padding-block:.125rem .375rem}
-html[data-shell=dark] .pagerbar{inset-inline-start:16.5rem}
-html[data-shell=dark] .pager{max-width:none;padding-inline:clamp(1.5rem,3vw,3rem)}
+/* Geometry is shared by both modes. Theme selectors below may only paint. */
+.topbar{block-size:var(--header-height)}
+.topbar .brand{flex:none}.topbar .brand-logo{inline-size:calc(var(--logo-header-height)*3.94);object-fit:contain}
+.topbar .menu-btn{display:none}
+.layout{max-width:none;grid-template-columns:var(--sidebar-width) minmax(0,1fr);gap:0;padding:0 0 6rem}
+.layout>.sidebar{position:fixed;inset-inline-start:0;top:var(--header-height);bottom:0;inline-size:var(--sidebar-width);block-size:calc(100dvh - var(--header-height));max-block-size:calc(100dvh - var(--header-height));border-radius:0;padding:1.5rem 1.125rem;transform:none;z-index:40}
+.layout>main{grid-column:2;inline-size:100%;max-inline-size:86rem;margin-inline:auto;padding:2rem clamp(1.5rem,3vw,3rem)}
+.sidebar .nav-group summary{border:0;border-radius:0;background:transparent}
+.sidebar .nav-link.nav-bare{border-radius:.5rem;margin-block-end:.375rem}
+.pagerbar{inset-inline-start:var(--sidebar-width)}
+.pager{max-width:none;padding-inline:clamp(1.5rem,3vw,3rem)}
+.section{scroll-margin-block-start:calc(var(--header-height) + 1.5rem)}
+html[data-shell=dark] .sidebar{color-scheme:dark;scrollbar-color:var(--nav-muted) transparent}
 .data-table thead,.data-table thead th,.rt thead th{background:var(--table-head-bg)!important;color:var(--table-head-text)!important}
 .data-table td{background:var(--surface)}
 .rt thead th,.rt-cap,.rs-head{border-color:var(--border)}
 .rt tbody tr:hover td,.cmp-side,.tab-head{background:var(--accent-soft)}
 .tt{background:linear-gradient(120deg,var(--brand),var(--brand2))}
-.sidebar{background:var(--nav-bg);padding:1rem;border-radius:0;scrollbar-width:thin;scrollbar-color:var(--nav-line) transparent}
+.sidebar{background:var(--nav-bg);border-radius:0;scrollbar-width:thin;scrollbar-color:var(--nav-line) transparent;color-scheme:light;color:var(--nav-text)}
 .sidebar .side-hint{font-weight:400;margin-block-end:.75rem}
 .sidebar .nav-group{border:0;margin-block-end:.375rem;padding-block-end:0}
 .sidebar .nav-flat{border:0;margin-block-end:.375rem}
@@ -926,7 +929,7 @@ figure figcaption,.gallery-item figcaption{font-size:var(--fs-note)}
   .card,.pick-card,.callout{padding:var(--sp-3)}
   .stat-num{font-size:1.75rem}
 }
-:root{--brand:#0B1B2B;--brand2:#0A6ED1;--accent:#0A6ED1;--accent-soft:#EAF4FE;--bg:#F7F9FC;--surface:#FFFFFF;--text:#1E2D3D;--muted:#526579;--border:#E8EDF3;--selected-bg:#EAF4FE;--selected-border:#0A6ED1;--selected-text:#0B1B2B;--selected-shadow:0 0 0 2px #0A6ED1;--focus:#0A6ED1;--sans:"MiSans",sans-serif;--table-head-bg:#EAF4FE;--table-head-text:#0B1B2B;--nav-bg:transparent;--nav-bg2:transparent;--nav-text:#0B1B2B;--nav-muted:#526579;--nav-active-bg:#EAF4FE;--nav-active-text:#0A6ED1;--nav-line:#E8EDF3;--logo-header-height:28px;--logo-cover-height:48px;--fs-cover:2.5rem;--fs-title:1.75rem;--fs-h3:1.3125rem;--fs-cardtitle:1.1875rem;--fs-body:1.0625rem;--flow-one:#c4dcf4;--flow-two:#ddebf9;--flow-three:#e9f2fb;--flow-paper:#f9fbfe;}.topbar{position:static}</style></head><body class="viewing"><header class="topbar" data-surface="light">
+:root{--brand:#0B1B2B;--brand2:#0A6ED1;--accent:#0A6ED1;--accent-soft:#EAF4FE;--bg:#F7F9FC;--surface:#FFFFFF;--text:#1E2D3D;--muted:#526579;--border:#E8EDF3;--selected-bg:#EAF4FE;--selected-border:#0A6ED1;--selected-text:#0B1B2B;--selected-shadow:0 0 0 2px #0A6ED1;--focus:#0A6ED1;--sans:"MiSans",sans-serif;--table-head-bg:#EAF4FE;--table-head-text:#0B1B2B;--nav-bg:#F7F9FC;--nav-bg2:#F7F9FC;--nav-text:#0B1B2B;--nav-muted:#526579;--nav-active-bg:#EAF4FE;--nav-active-text:#0A6ED1;--nav-line:#E8EDF3;--logo-header-height:28px;--logo-cover-height:48px;--fs-cover:2.5rem;--fs-title:1.75rem;--fs-h3:1.3125rem;--fs-cardtitle:1.1875rem;--fs-body:1.0625rem;--flow-one:#c4dcf4;--flow-two:#ddebf9;--flow-three:#e9f2fb;--flow-paper:#f9fbfe;}.topbar{position:static}</style></head><body class="viewing"><header class="topbar" data-surface="light">
   <button class="menu-btn" aria-label="打开目录">☰</button>
   <div class="brand"><img class="brand-logo" src="assets/logo.png" alt="大金 DAIKIN"></div>
   <div class="topbar-title"><span class="project-name">城市合伙人</span><span class="document-name"> · 招商宣讲手册</span></div>

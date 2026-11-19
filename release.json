@@ -1,9 +1,9 @@
 {
-  "version": "1.3.1",
+  "version": "1.3.2",
   "designer": "吖君",
   "package": {
-    "path": "downloads/handbook-workshop-v1.3.1.zip",
-    "bytes": 30892328,
-    "sha256": "5af9da418b54166fc846456103c74a3c2ac96d6ab7672db6fed50e3ebad7e0f3"
+    "path": "downloads/handbook-workshop-v1.3.2.zip",
+    "bytes": 16518728,
+    "sha256": "b05dacefe9805e93991ae885e394cfa90e14e82c3c02df16e6f95a79b16658b8"
   }
 }
