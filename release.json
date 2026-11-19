@@ -3,15 +3,15 @@
   "package": {
     "path": "downloads/handbook-workshop-v1.3.7.zip",
     "flavor": "shared",
-    "bytes": 1052898,
-    "sha256": "fffbc771c8bed1aa9020f4865a58bd5f06b0e73aabdaeb46cb75280801783828",
+    "bytes": 1052928,
+    "sha256": "a3f3302f42cfb9bf18032d535e8893335284996815c62f20d12b4748eaa4b800",
     "upload_limit_bytes": 5242880,
     "initial_font_download": true
   },
   "offline_package": {
     "path": "downloads/handbook-workshop-v1.3.7-offline.zip",
     "flavor": "offline",
-    "bytes": 16533453,
-    "sha256": "d00dc80a17c2aad0408017a65c944ae527a157dddf2b0e467af03b35ae90dd83"
+    "bytes": 16533483,
+    "sha256": "93188ad82b4b679fd866211c124a5454846b23edf28f0cfd744d24470f00d989"
   }
 }
