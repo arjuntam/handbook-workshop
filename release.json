@@ -1,8 +1,8 @@
 {
-  "version": "1.3.5",
+  "version": "1.3.6",
   "package": {
-    "path": "downloads/handbook-workshop-v1.3.5.zip",
-    "bytes": 16528493,
-    "sha256": "c32e8dc065860c5d072d86a70d5b88b1e0624396c9e8cb7c5ec6e85e37b972dd"
+    "path": "downloads/handbook-workshop-v1.3.6.zip",
+    "bytes": 16529075,
+    "sha256": "0b9386f565f42593a399d1dac1898a9e1b02caa2d6e8e2006c3ceb3415482b05"
   }
 }
