@@ -740,6 +740,7 @@ html.mobile-blocked body>*:not(.mobile-block){visibility:hidden!important}
 
 body,button,input,textarea,select{font-family:var(--sans)}
 body{font-weight:var(--weight-body,330)}
+.sidebar,.topbar,.pagerbar,.dl-dock{--fs-body:1.0625rem;--fs-text:1rem;--fs-note:.8125rem;--fs-tag:.6875rem;--fs-cardtitle:1.1875rem}
 .cover-actions{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:.875rem}
 .cover-download{display:inline-flex;align-items:center;justify-content:center;gap:.625rem;border:1px solid var(--border);border-radius:.875rem;background:var(--surface);color:var(--brand);padding:.875rem 1.5rem;min-block-size:3.25rem;font-size:1rem;font-weight:var(--weight-medium,430);line-height:1.5;text-decoration:none}
 .cover-download:hover{background:var(--accent-soft);border-color:var(--accent)}
@@ -819,6 +820,10 @@ html[data-shell=dark] .sidebar{color-scheme:dark;scrollbar-color:var(--nav-muted
 .cmp-card,.cmp-side{min-inline-size:0}
 .cmp-body{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}
 .cmp-side p,.cmp-tag{overflow-wrap:anywhere}
+.callout-body,.callout-body p{overflow-wrap:anywhere}
+.tabset{container:reading-tabs/inline-size}
+.tab-panel>.grid-1 .card{padding:clamp(.75rem,6%,2.5rem)}
+@container reading-tabs (inline-size < 28rem){.tab-panel>.grid{grid-template-columns:1fr}}
 .tab-img{max-inline-size:34rem;margin:1.25rem auto}
 .tab-img img{display:block;inline-size:100%;block-size:auto;max-block-size:36rem;object-fit:contain;margin-inline:auto}
 .scriptlib .sl-group>summary{font-size:var(--fs-cardtitle);font-weight:var(--weight-title,500);gap:.625rem}
@@ -839,6 +844,15 @@ html[data-shell=dark] .sidebar{color-scheme:dark;scrollbar-color:var(--nav-muted
 .nav-link.nav-bare.target-current{background:var(--accent-soft);color:var(--accent)}
 .nav-group-links .nav-dot{display:block;background:var(--muted);opacity:.35}
 .nav-group-links .target-current .nav-dot{background:var(--accent);opacity:1}
+
+.portal-hero .portal-hero-inner>h1{font-size:calc(clamp(2.125rem,4.4vw,3.5rem)*var(--type-size-factor,1))}
+.portal-hero .portal-hero-inner>p{font-size:calc(clamp(.9375rem,1.5vw,1.1875rem)*var(--type-size-factor,1))}
+.resource-body h3{font-size:calc(1.25rem*var(--type-size-factor,1))}
+.resource-desc,.resource-body li{font-size:var(--fs-text)}
+.resource-tag,.portal-step p{font-size:var(--fs-note)}
+.portal-step b{font-size:calc(.90625rem*var(--type-size-factor,1))}
+.g-focus .gallery-item figcaption{font-size:var(--fs-text)}
+.cm-zone h4{font-size:calc(.875rem*var(--type-size-factor,1))!important}
 
 /* Source Han families have their own optical hierarchy; MiSans retains its baseline. */
 html[data-font^="source-han-"]{--cover-title-weight:var(--weight-title);--cover-description-weight:var(--weight-body)}
@@ -1101,9 +1115,9 @@ figure figcaption,.gallery-item figcaption{font-size:var(--fs-note)}
 .cover-fluid-mode .cover-brand-text{font-size:1rem;letter-spacing:.04em;margin-block-end:2.5rem}
 .cover-fluid-mode .cover-kicker{font-size:.8125rem;letter-spacing:.12em;font-weight:400;color:var(--accent);margin-block-end:1.5rem}
 .cover-fluid-mode .cover-kicker::before,.cover-fluid-mode .cover-kicker::after{display:none}
-.cover-fluid-mode h1{font-size:clamp(2.6rem,2rem + 2.5vw,4.5rem);font-weight:var(--cover-title-weight,500);color:var(--cover-ink);line-height:1.17;letter-spacing:-.025em;
+.cover-fluid-mode h1{font-size:calc(clamp(2.6rem,2rem + 2.5vw,4.5rem)*var(--type-size-factor,1));font-weight:var(--cover-title-weight,500);color:var(--cover-ink);line-height:1.17;letter-spacing:-.025em;
  max-inline-size:19ch;margin:0 auto 1.75rem;overflow-wrap:anywhere;text-wrap:balance}
-.cover-fluid-mode p{font-weight:var(--cover-description-weight,330);font-size:1.125rem;line-height:1.85;color:var(--cover-muted);max-inline-size:40rem;margin:0 auto 1.5rem}
+.cover-fluid-mode p{font-weight:var(--cover-description-weight,330);font-size:calc(1.125rem*var(--type-size-factor,1));line-height:1.85;color:var(--cover-muted);max-inline-size:40rem;margin:0 auto 1.5rem}
 .cover-fluid-mode .cover-meta{font-size:.8125rem;color:var(--cover-muted);letter-spacing:.025em;margin-block-end:2.25rem}
 .cover-fluid-mode .cover-start{background:var(--cover-ink);box-shadow:none;border-radius:.875rem;font-size:1rem;padding:.875rem 1.75rem;min-block-size:3.25rem}
 .cover-fluid-mode .cover-start:active{transform:scale(.985)}
@@ -1163,7 +1177,7 @@ figure figcaption,.gallery-item figcaption{font-size:var(--fs-note)}
 .portal-wrap h2{font-size:1rem;color:var(--muted);margin-block:0 1.25rem}
 .portal-footer{text-align:center;font-size:.875rem;color:var(--muted);padding:2.5rem 1.5rem}
 @media(max-width:600px){.portal-topbar{padding:1rem;gap:.75rem}.portal-hero{padding:5rem 1.5rem 4rem}.portal-wrap{padding-inline:1rem}.resource-body{padding:1.25rem}}
-:root{--brand:#0B1B2B;--brand2:#0A6ED1;--accent:#0A6ED1;--accent-soft:#EAF4FE;--bg:#F7F9FC;--surface:#FFFFFF;--text:#1E2D3D;--muted:#526579;--border:#E8EDF3;--selected-bg:#EAF4FE;--selected-border:#0A6ED1;--selected-text:#0B1B2B;--selected-shadow:0 0 0 2px #0A6ED1;--focus:#0A6ED1;--sans:"MiSans",sans-serif;--table-head-bg:#EAF4FE;--table-head-text:#0B1B2B;--compare-before-bg:#F7F9FC;--compare-after-label:#0a5197;--map-land-fill:#e6eef7;--map-covered-fill:#9dc5ed;--map-covered-stroke:#4f97de;--map-dot:#0a4986;--nav-bg:#F7F9FC;--nav-bg2:#F7F9FC;--nav-text:#0B1B2B;--nav-muted:#526579;--nav-active-bg:#EAF4FE;--nav-active-text:#0A6ED1;--nav-line:#E8EDF3;--logo-header-height:28px;--logo-cover-height:48px;--fs-cover:2.5rem;--fs-title:1.75rem;--fs-h3:1.3125rem;--fs-cardtitle:1.1875rem;--fs-body:1.0625rem;--flow-one:#c4dcf4;--flow-two:#ddebf9;--flow-three:#e9f2fb;--flow-paper:#f9fbfe;--weight-body:330;--weight-title:500;--weight-medium:430;}</style></head>
+:root{--brand:#0B1B2B;--brand2:#0A6ED1;--accent:#0A6ED1;--accent-soft:#EAF4FE;--bg:#F7F9FC;--surface:#FFFFFF;--text:#1E2D3D;--muted:#526579;--border:#E8EDF3;--selected-bg:#EAF4FE;--selected-border:#0A6ED1;--selected-text:#0B1B2B;--selected-shadow:0 0 0 2px #0A6ED1;--focus:#0A6ED1;--sans:"MiSans",sans-serif;--table-head-bg:#EAF4FE;--table-head-text:#0B1B2B;--compare-before-bg:#F7F9FC;--compare-after-label:#0a5197;--map-land-fill:#e6eef7;--map-covered-fill:#9dc5ed;--map-covered-stroke:#4f97de;--map-dot:#0a4986;--nav-bg:#F7F9FC;--nav-bg2:#F7F9FC;--nav-text:#0B1B2B;--nav-muted:#526579;--nav-active-bg:#EAF4FE;--nav-active-text:#0A6ED1;--nav-line:#E8EDF3;--logo-header-height:28px;--logo-cover-height:48px;--fs-cover:2.5rem;--fs-title:1.75rem;--fs-h3:1.3125rem;--fs-cardtitle:1.1875rem;--fs-body:1.0625rem;--fs-text:1rem;--fs-lede:1.125rem;--fs-note:0.8125rem;--fs-tag:0.6875rem;--type-size-factor:1;--flow-one:#c4dcf4;--flow-two:#ddebf9;--flow-three:#e9f2fb;--flow-paper:#f9fbfe;--weight-body:330;--weight-title:500;--weight-medium:430;}</style></head>
 <body class="portal-page"><header class="portal-topbar"><img class="brand-logo" src="assets/logo.png" alt="大金 DAIKIN"><span>城市合伙人 · 资料中心</span></header>
 <div class="portal-hero cover-fluid-mode"><div class="cover-fluid" aria-hidden="true"><div class="flow-field flow-one"></div><div class="flow-field flow-two"></div><div class="flow-field flow-three"></div><div class="flow-sweep"></div></div>
 <button type="button" class="cover-motion-toggle">暂停动态</button><div class="portal-hero-inner"><span class="portal-kicker">大金新零售 · 城市合伙人项目</span><h1>城市合伙人 · 资料中心</h1><p>一份讲清价值、一份教落地执行、一份给可复用版式。</p></div></div>

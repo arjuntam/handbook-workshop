@@ -111,14 +111,38 @@
       "--fs-title": "1.75rem",
       "--fs-h3": "1.3125rem",
       "--fs-cardtitle": "1.1875rem",
-      "--fs-body": "1.0625rem"
+      "--fs-body": "1.0625rem",
+      "--fs-text": "1rem",
+      "--fs-lede": "1.125rem",
+      "--fs-note": ".8125rem",
+      "--fs-tag": ".6875rem"
     },
     "presentation": {
       "--fs-cover": "2.875rem",
       "--fs-title": "2rem",
       "--fs-h3": "1.5rem",
       "--fs-cardtitle": "1.3125rem",
-      "--fs-body": "1.125rem"
+      "--fs-body": "1.125rem",
+      "--fs-text": "1rem",
+      "--fs-lede": "1.125rem",
+      "--fs-note": ".8125rem",
+      "--fs-tag": ".6875rem"
+    },
+    "compact": {
+      "--fs-cover": "2.25rem",
+      "--fs-title": "1.575rem",
+      "--fs-h3": "1.18125rem",
+      "--fs-cardtitle": "1.06875rem",
+      "--fs-body": "0.95625rem",
+      "--fs-text": "0.9rem",
+      "--fs-lede": "1.0125rem",
+      "--fs-note": "0.73125rem",
+      "--fs-tag": "0.61875rem"
     }
+  },
+  "type_scale_factor": {
+    "min": 0.8,
+    "max": 1.5,
+    "step": 0.01
   }
 }
