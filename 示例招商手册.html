@@ -1219,7 +1219,8 @@ body{background:var(--bg);color:var(--text)}
     links.forEach(a=>{const on=a.getAttribute('href')==='#'+id;
       a.classList.toggle('target-current',on);
       if(on){a.setAttribute('aria-current','true');const g=a.closest('.nav-group');
-        if(g){g.open=true;document.querySelectorAll('.sidebar details.nav-group').forEach(d=>{if(d!==g)d.open=false;});}
+        if(g)g.open=true;
+        document.querySelectorAll('.sidebar details.nav-group').forEach(d=>{if(d!==g)d.open=false;});
         // 目录自动跟随：把当前项滚进侧栏可视区
         const side=a.closest('.sidebar');
         if(side){const ar=a.getBoundingClientRect(),sr=side.getBoundingClientRect();
@@ -1268,7 +1269,7 @@ body{background:var(--bg);color:var(--text)}
     const lb=document.getElementById('lightbox');
     if(lb&&lb.open)return; // 弹窗打开时方向键用于切图，不翻小节
     // tab / metro 等自带方向键的控件抢占焦点时不翻页
-    if(document.activeElement.closest('[role="tab"],[role="tablist"],.tabset,.metro-stop,.metro,.multi-gallery,.china-map-component,.hw-fold-grid,.scriptlib'))return;
+    if(document.activeElement.closest('.sidebar,[role="tab"],[role="tablist"],.tabset,.metro-stop,.metro,.multi-gallery,.china-map-component,.hw-fold-grid,.scriptlib'))return;
     if(e.key==='ArrowLeft')show(cur-1);
     if(e.key==='ArrowRight')show(cur+1);
   });

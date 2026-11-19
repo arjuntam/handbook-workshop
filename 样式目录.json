@@ -3,10 +3,356 @@
     "使用说明",
     "基础规范",
     "配色、字体与字号",
-    "内容样式",
+    "内容样式 · 选型总览",
+    "文字与重点",
+    "卡片与选择",
+    "数据与对照",
+    "流程与导航",
+    "话术与问答",
+    "图片与资料",
     "转换与验收"
   ],
   "max_navigation_depth": 2,
+  "categories": [
+    {
+      "id": "text",
+      "name": "文字与重点",
+      "description": "写说明、讲重点、做提醒。",
+      "hint": "完整解释用标准正文；一句重点用重点引语；提醒或注意事项用提示卡。",
+      "types": [
+        "lede",
+        "text",
+        "h3",
+        "quote",
+        "solution",
+        "callout",
+        "warn",
+        "divider"
+      ],
+      "styles": [
+        {
+          "id": "T01",
+          "name": "开篇导语",
+          "scope": "一节开头的核心说明",
+          "section": "blk-lede"
+        },
+        {
+          "id": "T02",
+          "name": "标准正文",
+          "scope": "完整段落、条件和解释",
+          "section": "blk-text"
+        },
+        {
+          "id": "T03",
+          "name": "段内小标题",
+          "scope": "同节内的第二层说明",
+          "section": "blk-h3"
+        },
+        {
+          "id": "T04",
+          "name": "重点引语",
+          "scope": "原稿明确的一句话重点",
+          "section": "blk-quote"
+        },
+        {
+          "id": "T04-A",
+          "name": "折叠解决方案区",
+          "scope": "先讲现状，再展开引语与一组方案要点",
+          "section": "blk-solution"
+        },
+        {
+          "id": "T05",
+          "name": "语义提示卡",
+          "scope": "重点、提醒或说明",
+          "section": "blk-callout"
+        },
+        {
+          "id": "T06",
+          "name": "风险提醒卡",
+          "scope": "确实有风险或禁止事项",
+          "section": "blk-warn"
+        },
+        {
+          "id": "T07",
+          "name": "内容分隔线",
+          "scope": "同节内轻量分隔",
+          "section": "blk-divider"
+        }
+      ]
+    },
+    {
+      "id": "cards",
+      "name": "卡片与选择",
+      "description": "摆要点、选方案、逐项核对、按需展开。",
+      "hint": "只展示用并列要点卡；只选一项用单选卡；多项勾选用复选清单；补充说明可用折叠卡。",
+      "types": [
+        "grid",
+        "number_strip",
+        "watermark",
+        "pick",
+        "tracks",
+        "tabs",
+        "checklist",
+        "icon_folds",
+        "number_folds"
+      ],
+      "styles": [
+        {
+          "id": "L01",
+          "name": "并列要点卡",
+          "scope": "少量同层级短信息",
+          "section": "blk-grid"
+        },
+        {
+          "id": "L01-A",
+          "name": "编号横条卡",
+          "scope": "少量编号、短标题与简短说明，可突出指定项目",
+          "section": "blk-number_strip"
+        },
+        {
+          "id": "L01-B",
+          "name": "水印编号卡",
+          "scope": "多个编号板块，每块包含标题、副标和成对信息",
+          "section": "blk-watermark"
+        },
+        {
+          "id": "L02",
+          "name": "单选高亮卡",
+          "scope": "同组只选一个方案",
+          "section": "states"
+        },
+        {
+          "id": "L02-A",
+          "name": "双赛道选择面板",
+          "scope": "两套互斥体系，各有要点、总结与独立章节入口",
+          "section": "blk-tracks"
+        },
+        {
+          "id": "L03",
+          "name": "场景切换卡",
+          "scope": "多个可独立阅读的场景",
+          "section": "tabs-demo"
+        },
+        {
+          "id": "L22",
+          "name": "复选清单",
+          "scope": "逐项核对、完成标记；允许多项同时勾选并取消",
+          "section": "blk-checklist"
+        },
+        {
+          "id": "L23",
+          "name": "图标折叠卡",
+          "scope": "少量带图标的标准、维度与说明，按需展开",
+          "section": "blk-icon_folds"
+        },
+        {
+          "id": "L24",
+          "name": "编号折叠卡网格",
+          "scope": "编号主题按网格组织，点击后阅读对应说明",
+          "section": "blk-number_folds"
+        }
+      ]
+    },
+    {
+      "id": "data",
+      "name": "数据与对照",
+      "description": "看数字、查明细、对比差异、展示分布。",
+      "hint": "逐项比较用双栏对照；多列明细用数据表；少量核心数字用指标卡；已知城市点位用地图。",
+      "types": [
+        "compare",
+        "table",
+        "roster",
+        "total",
+        "stats",
+        "china_map"
+      ],
+      "styles": [
+        {
+          "id": "L04",
+          "name": "双栏对照",
+          "scope": "明确的一一对应关系",
+          "section": "blk-compare"
+        },
+        {
+          "id": "L05",
+          "name": "通用数据表",
+          "scope": "多列数据、表单字段与清单",
+          "section": "table-demo"
+        },
+        {
+          "id": "L06",
+          "name": "人员分工表",
+          "scope": "事项/执行/负责/时间等固定字段",
+          "section": "blk-roster"
+        },
+        {
+          "id": "L07",
+          "name": "汇总指标条",
+          "scope": "原稿已确认的合计指标",
+          "section": "blk-total"
+        },
+        {
+          "id": "L08",
+          "name": "数字指标卡",
+          "scope": "少量数字且单位口径明确",
+          "section": "blk-stats"
+        },
+        {
+          "id": "L19",
+          "name": "中国城市分布地图",
+          "scope": "城市覆盖、区域布局与项目分布，已有明确点位和数据口径",
+          "section": "china-map"
+        }
+      ]
+    },
+    {
+      "id": "flow",
+      "name": "流程与导航",
+      "description": "讲步骤、排时间、看阶段、找章节。",
+      "hint": "先后动作选步骤流程；明确时间选时间流程单；判断两条路径选分流决策；章节入口选导航卡。",
+      "types": [
+        "steps",
+        "runsheet",
+        "metro",
+        "decision",
+        "chapter_nav"
+      ],
+      "styles": [
+        {
+          "id": "L09",
+          "name": "步骤流程",
+          "scope": "明确先后顺序的简短操作",
+          "section": "blk-steps"
+        },
+        {
+          "id": "L10",
+          "name": "时间流程单",
+          "scope": "明确时间点的会议或执行节点",
+          "section": "blk-runsheet"
+        },
+        {
+          "id": "L11",
+          "name": "阶段导航条",
+          "scope": "阶段进度、当前阶段与下一阶段",
+          "section": "blk-metro"
+        },
+        {
+          "id": "L20",
+          "name": "分流决策面板",
+          "scope": "明确判断分为两条路径，每路为顺序步骤或情形动作",
+          "section": "blk-decision"
+        },
+        {
+          "id": "L21",
+          "name": "章节导航卡",
+          "scope": "章节扉页列出本章内容与阅读顺序",
+          "section": "blk-chapter_nav"
+        }
+      ]
+    },
+    {
+      "id": "scripts",
+      "name": "话术与问答",
+      "description": "复制话术、查问答、看对话与发圈示例。",
+      "hint": "直接取用话术选复制库；按问题找答案选折叠问答；展示交流过程选对话演示。",
+      "types": [
+        "scriptlib",
+        "faq",
+        "chat",
+        "moments"
+      ],
+      "styles": [
+        {
+          "id": "L12",
+          "name": "话术复制库",
+          "scope": "按场景分组、可直接使用的话术",
+          "section": "blk-scriptlib"
+        },
+        {
+          "id": "L13",
+          "name": "折叠问答",
+          "scope": "读者按问题查找答案",
+          "section": "blk-faq"
+        },
+        {
+          "id": "L14",
+          "name": "对话演示",
+          "scope": "明确说话人的沟通示例",
+          "section": "blk-chat"
+        },
+        {
+          "id": "L15",
+          "name": "朋友圈范例",
+          "scope": "发圈文案与配图示例",
+          "section": "moments-live"
+        }
+      ]
+    },
+    {
+      "id": "media",
+      "name": "图片与资料",
+      "description": "展示图片、浏览图册、打开或下载资料。",
+      "hint": "一张图用原图；多张图按并列、顺序或主图选择画廊；手册入口用封面卡；下载文件用附件区。",
+      "types": [
+        "img",
+        "imgs",
+        "resources",
+        "note",
+        "downloads",
+        "html"
+      ],
+      "styles": [
+        {
+          "id": "L16",
+          "name": "单张原图",
+          "scope": "需要完整阅读的一张图",
+          "section": "blk-img"
+        },
+        {
+          "id": "L17-A",
+          "name": "网格图册",
+          "scope": "2–6 张需要同时比较的现场照、产品图或截图",
+          "section": "gallery-grid"
+        },
+        {
+          "id": "L17-B",
+          "name": "横向胶片",
+          "scope": "多张照片按顺序浏览，保留相邻图片预览",
+          "section": "gallery-filmstrip"
+        },
+        {
+          "id": "L17-C",
+          "name": "焦点大图画廊",
+          "scope": "案例、活动或作品展示，一次突出一张主图",
+          "section": "gallery-focus"
+        },
+        {
+          "id": "L18",
+          "name": "资料封面入口卡",
+          "scope": "同一项目的手册、模板与附件入口",
+          "section": "project-portal-demo"
+        },
+        {
+          "id": "A01",
+          "name": "配套附件提示",
+          "scope": "提醒有可下载配套资料",
+          "section": "blk-note"
+        },
+        {
+          "id": "A02",
+          "name": "就地附件下载区",
+          "scope": "当前章节有明确对应附件，在内容旁提供入口",
+          "section": "blk-downloads"
+        },
+        {
+          "id": "X01",
+          "name": "受控自定义图形",
+          "scope": "已审查的 SVG/图形嵌入",
+          "section": "blk-html"
+        }
+      ]
+    }
+  ],
   "base": [
     {
       "id": "B03",
@@ -60,7 +406,9 @@
       "avoid": "长文或多条并列信息",
       "interaction": "静态阅读",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "text",
+      "category_name": "文字与重点"
     },
     {
       "id": "T02",
@@ -70,7 +418,9 @@
       "avoid": "用字号或颜色临时表达层级",
       "interaction": "静态阅读",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "text",
+      "category_name": "文字与重点"
     },
     {
       "id": "T03",
@@ -80,7 +430,9 @@
       "avoid": "堆成多个章节的替代品",
       "interaction": "静态阅读",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "text",
+      "category_name": "文字与重点"
     },
     {
       "id": "T04",
@@ -90,7 +442,9 @@
       "avoid": "普通段落或无依据的宣传结论",
       "interaction": "默认静态；明确设置 reveal 时展开查看",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "text",
+      "category_name": "文字与重点"
     },
     {
       "id": "T04-A",
@@ -100,7 +454,9 @@
       "avoid": "只有引语时用 T04 reveal；需要同时对比的内容",
       "interaction": "原生折叠；内部沿用展示卡或单选卡的既有交互",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "收起/展开；内部块沿用各自状态合同"
+      "states": "收起/展开；内部块沿用各自状态合同",
+      "category": "text",
+      "category_name": "文字与重点"
     },
     {
       "id": "T05",
@@ -110,7 +466,9 @@
       "avoid": "整页所有正文",
       "interaction": "静态阅读；语义蓝/绿/琥珀/红不随主题改义",
       "colors": "按语义使用蓝/绿/琥珀/红",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "text",
+      "category_name": "文字与重点"
     },
     {
       "id": "T06",
@@ -120,7 +478,9 @@
       "avoid": "普通解释和正向卖点",
       "interaction": "静态阅读；保留红色风险语义",
       "colors": "固定风险红与浅红底",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "text",
+      "category_name": "文字与重点"
     },
     {
       "id": "T07",
@@ -130,7 +490,9 @@
       "avoid": "靠大量分隔线制造层级",
       "interaction": "无交互",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "text",
+      "category_name": "文字与重点"
     },
     {
       "id": "L01",
@@ -140,7 +502,9 @@
       "avoid": "长段落、统一字段的大量明细",
       "interaction": "展示；独立操作必须用明确按钮，不定义整卡选中",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "cards",
+      "category_name": "卡片与选择"
     },
     {
       "id": "L01-A",
@@ -150,7 +514,9 @@
       "avoid": "长段正文、过多要点；编号不自动代表业务先后",
       "interaction": "静态展示；自适应实际条数，不制造点击状态",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "静态展示；强调项只反映明确内容，不代表选择"
+      "states": "静态展示；强调项只反映明确内容，不代表选择",
+      "category": "cards",
+      "category_name": "卡片与选择"
     },
     {
       "id": "L01-B",
@@ -160,7 +526,9 @@
       "avoid": "大量固定字段明细用表格；不靠水印承载唯一编号",
       "interaction": "静态展示；小编号为主，大编号只作装饰",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "静态展示；强调项只反映明确内容，不代表选择"
+      "states": "静态展示；强调项只反映明确内容，不代表选择",
+      "category": "cards",
+      "category_name": "卡片与选择"
     },
     {
       "id": "L02",
@@ -170,7 +538,9 @@
       "avoid": "单纯展示、真实多选、未实现的提交结果",
       "interaction": "鼠标/触屏/键盘选择；柔底+主题边框+竖线+外描边；禁用不能选",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "默认/悬停/键盘焦点/选中/禁用"
+      "states": "默认/悬停/键盘焦点/选中/禁用",
+      "category": "cards",
+      "category_name": "卡片与选择"
     },
     {
       "id": "L02-A",
@@ -180,7 +550,9 @@
       "avoid": "纯对照用 L04；三套以上或不需要选择",
       "interaction": "原生 radio 单选；底部独立按钮跳章；选择不自动导航",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "初始未选/选中/焦点/禁用；选中不自动导航"
+      "states": "初始未选/选中/焦点/禁用；选中不自动导航",
+      "category": "cards",
+      "category_name": "卡片与选择"
     },
     {
       "id": "L03",
@@ -190,7 +562,9 @@
       "avoid": "需要同时对比的数据、只有一个场景",
       "interaction": "点击标签切换；方向键/Home/End；活动标签与内容同步",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "当前标签/非当前标签/键盘焦点"
+      "states": "当前标签/非当前标签/键盘焦点",
+      "category": "cards",
+      "category_name": "卡片与选择"
     },
     {
       "id": "L04",
@@ -200,7 +574,9 @@
       "avoid": "仅因 PPT 上左右摆放就猜为对照",
       "interaction": "静态同时呈现；窄屏上下排列",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "data",
+      "category_name": "数据与对照"
     },
     {
       "id": "L05",
@@ -210,7 +586,9 @@
       "avoid": "为了套版式删列；未经确认猜表头",
       "interaction": "局部横纵滚动；已指定表头时粘性显示；可键盘滚动",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "data",
+      "category_name": "数据与对照"
     },
     {
       "id": "L06",
@@ -220,7 +598,9 @@
       "avoid": "字段不同或超过固定五列的任意表格",
       "interaction": "紧凑阅读与局部滚动；不是可填写表单",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "data",
+      "category_name": "数据与对照"
     },
     {
       "id": "L07",
@@ -230,7 +610,9 @@
       "avoid": "凭空求和或与明细混排",
       "interaction": "静态汇总；不自动计算",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "data",
+      "category_name": "数据与对照"
     },
     {
       "id": "L08",
@@ -240,7 +622,9 @@
       "avoid": "正文中的任意数值或不同单位混加",
       "interaction": "可选入场计数；减少动态时静态数字；不是实时数据",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "data",
+      "category_name": "数据与对照"
     },
     {
       "id": "L09",
@@ -250,7 +634,9 @@
       "avoid": "并列要点或未确认的因果关系",
       "interaction": "静态顺序阅读",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "flow",
+      "category_name": "流程与导航"
     },
     {
       "id": "L10",
@@ -260,7 +646,9 @@
       "avoid": "没有时间信息却补造时间轴",
       "interaction": "静态时间线；高亮节点只表示源稿确认重点",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "flow",
+      "category_name": "流程与导航"
     },
     {
       "id": "L11",
@@ -270,7 +658,9 @@
       "avoid": "所有流程一律地铁化",
       "interaction": "选择阶段查看详情；默认不跳章节，章节跳转使用独立按钮",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "flow",
+      "category_name": "流程与导航"
     },
     {
       "id": "L12",
@@ -280,7 +670,9 @@
       "avoid": "把解释或禁用条件混进可复制正文",
       "interaction": "展开/收起 + 单段复制 + 成功/失败反馈；tabs 内默认 flat",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "scripts",
+      "category_name": "话术与问答"
     },
     {
       "id": "L13",
@@ -290,7 +682,9 @@
       "avoid": "需要同时比较的内容或纯标题",
       "interaction": "原生展开/收起；答案复制有反馈",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "scripts",
+      "category_name": "话术与问答"
     },
     {
       "id": "L14",
@@ -300,7 +694,9 @@
       "avoid": "把技术说明伪装成真实聊天记录",
       "interaction": "按气泡阅读/复制；身份与头像需有来源",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "scripts",
+      "category_name": "话术与问答"
     },
     {
       "id": "L15",
@@ -310,7 +706,9 @@
       "avoid": "真实社交动态或保存承诺",
       "interaction": "演示点赞/评论；仅当前页面状态，不冒充已发布",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "scripts",
+      "category_name": "话术与问答"
     },
     {
       "id": "L16",
@@ -320,7 +718,9 @@
       "avoid": "把完整网页变成不可搜索截图",
       "interaction": "点击或键盘放大、Escape 关闭",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "media",
+      "category_name": "图片与资料"
     },
     {
       "id": "L17",
@@ -330,7 +730,9 @@
       "avoid": "裁掉图表关键部分",
       "interaction": "点击放大、同组切图、关闭返回；图片说明保留",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "media",
+      "category_name": "图片与资料"
     },
     {
       "id": "L18",
@@ -340,7 +742,9 @@
       "avoid": "把待补链接伪装成可下载；整卡链接中再嵌按钮",
       "interaction": "封面并排、底部动作对齐；阅读/下载/外链使用独立原生链接",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "media",
+      "category_name": "图片与资料"
     },
     {
       "id": "L19",
@@ -350,7 +754,9 @@
       "avoid": "未经确认的覆盖数、路线规划、精确测绘或自动猜坐标",
       "interaction": "悬停看名称；点击城市保持选中；区域汇总说明卡；按钮/键盘缩放与复位，拖动平移；Ctrl/⌘+滚轮缩放",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "data",
+      "category_name": "数据与对照"
     },
     {
       "id": "L20",
@@ -360,7 +766,9 @@
       "avoid": "三路以上复杂决策图；不从并列内容猜条件",
       "interaction": "静态并列阅读；步骤和情形使用不同结构，不伪造可选状态",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "静态展示；强调项只反映明确内容，不代表选择"
+      "states": "静态展示；强调项只反映明确内容，不代表选择",
+      "category": "flow",
+      "category_name": "流程与导航"
     },
     {
       "id": "L21",
@@ -370,7 +778,9 @@
       "avoid": "普通页重复堆导航按钮；目标不明确",
       "interaction": "原生按钮跳到实际章节，同步目录与底部翻页栏",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "flow",
+      "category_name": "流程与导航"
     },
     {
       "id": "L22",
@@ -380,7 +790,9 @@
       "avoid": "互斥方案选择；未接保存时声称已提交或保存",
       "interaction": "原生 checkbox；整行可点，空格切换；各项独立，可禁用",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "未勾选/已勾选/焦点/禁用；多项独立、可取消；不宣称保存"
+      "states": "未勾选/已勾选/焦点/禁用；多项独立、可取消；不宣称保存",
+      "category": "cards",
+      "category_name": "卡片与选择"
     },
     {
       "id": "L23",
@@ -390,7 +802,9 @@
       "avoid": "必须同时可见的重要正文；纯展示卡或单选方案",
       "interaction": "原生 details 独立展开；图标与箭头提示；展开用柔底、边框、左竖线高亮",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "收起/展开/键盘焦点；高亮表示展开，不表示单选"
+      "states": "收起/展开/键盘焦点；高亮表示展开，不表示单选",
+      "category": "cards",
+      "category_name": "卡片与选择"
     },
     {
       "id": "L24",
@@ -400,7 +814,9 @@
       "avoid": "编号不代表先后时不得补造流程；不要冒充单选卡",
       "interaction": "原生 details 独立展开与收起；编号保留，展开高亮；支持嵌入原生块",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "收起/展开/键盘焦点；高亮表示展开，不表示单选"
+      "states": "收起/展开/键盘焦点；高亮表示展开，不表示单选",
+      "category": "cards",
+      "category_name": "卡片与选择"
     },
     {
       "id": "A01",
@@ -410,7 +826,9 @@
       "avoid": "承载正文或假装附件已存在",
       "interaction": "提示本身不下载；实际入口在附件组件",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "media",
+      "category_name": "图片与资料"
     },
     {
       "id": "A02",
@@ -420,7 +838,9 @@
       "avoid": "未明确归属的附件；缺文件不得伪装可下载",
       "interaction": "引用全局附件同源记录；下载、打开、待补分别呈现",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "下载/打开/待补；待补项没有可点击下载链接"
+      "states": "下载/打开/待补；待补项没有可点击下载链接",
+      "category": "media",
+      "category_name": "图片与资料"
     },
     {
       "id": "X01",
@@ -430,7 +850,9 @@
       "avoid": "逃离样式库手写普通页面；注入原稿脚本",
       "interaction": "交互单独定义和验证，不自动执行来源内容",
       "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
-      "states": "按上述交互定义；静态块无伪造点击状态"
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "media",
+      "category_name": "图片与资料"
     }
   ],
   "pages": [
@@ -522,7 +944,9 @@
       "layout": "grid",
       "scope": "2–6 张需要同时比较的现场照、产品图或截图",
       "avoid": "大量图片挤成小缩略图",
-      "interaction": "完整并列呈现；点击放大和同组切图"
+      "interaction": "完整并列呈现；点击放大和同组切图",
+      "category": "media",
+      "category_name": "图片与资料"
     },
     {
       "id": "L17-B",
@@ -530,7 +954,9 @@
       "layout": "filmstrip",
       "scope": "多张照片按顺序浏览，保留相邻图片预览",
       "avoid": "需要同时逐列核对的数据图",
-      "interaction": "横向滚动/触屏滑动/鼠标拖动；按钮、序号、左右键；当前图片可放大"
+      "interaction": "横向滚动/触屏滑动/鼠标拖动；按钮、序号、左右键；当前图片可放大",
+      "category": "media",
+      "category_name": "图片与资料"
     },
     {
       "id": "L17-C",
@@ -538,7 +964,9 @@
       "layout": "focus",
       "scope": "案例、活动或作品展示，一次突出一张主图",
       "avoid": "密集表格、技术参数或要求全部同时可读的图片",
-      "interaction": "平面大图横向滑动，相邻图片露出；侧图先居中，再点放大；圆形箭头和位置圆点；拖动/方向键可切换；不自动播放"
+      "interaction": "平面大图横向滑动，相邻图片露出；侧图先居中，再点放大；圆形箭头和位置圆点；拖动/方向键可切换；不自动播放",
+      "category": "media",
+      "category_name": "图片与资料"
     }
   ]
 }
