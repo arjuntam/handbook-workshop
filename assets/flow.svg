@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="102 60 820 512" width="820" height="512" role="img" aria-label="启动会执行：五阶段进度，已完成三个阶段">
+  <defs>
+    <linearGradient id="fbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2f8ff"/><stop offset="1" stop-color="#e6f1fd"/>
+    </linearGradient>
+    <linearGradient id="ffill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7fb8ea"/><stop offset="1" stop-color="#2f6fb5"/>
+    </linearGradient>
+    <filter id="fCard" x="-30%" y="-30%" width="170%" height="170%">
+      <feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#1b4f8a" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1024" height="640" fill="url(#fbg)"/>
+  <circle cx="884" cy="140" r="128" fill="#dcecff" opacity="0.6"/>
+  <circle cx="140" cy="516" r="104" fill="#dcecff" opacity="0.55"/>
+
+  <!-- 进度数字 -->
+  <g>
+    <text x="268" y="222" font-family="system-ui,-apple-system,'Helvetica Neue',sans-serif"
+          font-size="96" font-weight="800" fill="#1b4f8a" letter-spacing="-4">3</text>
+    <text x="342" y="222" font-family="system-ui,-apple-system,'Helvetica Neue',sans-serif"
+          font-size="42" font-weight="700" fill="#9ab6d2">/ 5</text>
+    <text x="452" y="196" font-family="system-ui,-apple-system,'Helvetica Neue',sans-serif"
+          font-size="19" font-weight="700" fill="#5c83a8">阶段已完成</text>
+    <text x="452" y="224" font-family="system-ui,-apple-system,'Helvetica Neue',sans-serif"
+          font-size="14" font-weight="500" fill="#a8bccd">当前推进至第 3 阶段 · 现场爆破</text>
+  </g>
+
+  <!-- 进度条 -->
+  <rect x="268" y="286" width="486" height="18" rx="9" fill="#e2ecf7"/>
+  <rect x="268" y="286" width="292" height="18" rx="9" fill="url(#ffill)"/>
+
+  <!-- 节点 -->
+  <g>
+    <!-- 1 -->
+    <circle cx="300" cy="295" r="30" fill="#2f6fb5"/>
+    <path d="M286 295l10 11 19-21" fill="none" stroke="#ffffff" stroke-width="6"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="300" y="368" font-family="system-ui,-apple-system,sans-serif" font-size="14"
+          font-weight="700" fill="#5c83a8" text-anchor="middle">筹备</text>
+
+    <!-- 2 -->
+    <circle cx="398" cy="295" r="30" fill="#2f6fb5"/>
+    <path d="M384 295l10 11 19-21" fill="none" stroke="#ffffff" stroke-width="6"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="398" y="368" font-family="system-ui,-apple-system,sans-serif" font-size="14"
+          font-weight="700" fill="#5c83a8" text-anchor="middle">邀约</text>
+
+    <!-- 3 当前 -->
+    <circle cx="496" cy="295" r="38" fill="#fde8cd"/>
+    <circle cx="496" cy="295" r="30" fill="#f2a33c"/>
+    <text x="496" y="304" font-family="system-ui,-apple-system,sans-serif" font-size="24"
+          font-weight="800" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="496" y="376" font-family="system-ui,-apple-system,sans-serif" font-size="14"
+          font-weight="800" fill="#d38c2a" text-anchor="middle">爆破</text>
+
+    <!-- 4 -->
+    <circle cx="594" cy="295" r="26" fill="#ffffff" stroke="#c8daec" stroke-width="3.5"/>
+    <text x="594" y="303" font-family="system-ui,-apple-system,sans-serif" font-size="19"
+          font-weight="700" fill="#9ab6d2" text-anchor="middle">4</text>
+    <text x="594" y="368" font-family="system-ui,-apple-system,sans-serif" font-size="14"
+          font-weight="600" fill="#b3c6d8" text-anchor="middle">置换</text>
+
+    <!-- 5 -->
+    <circle cx="692" cy="295" r="26" fill="#ffffff" stroke="#c8daec" stroke-width="3.5"/>
+    <text x="692" y="303" font-family="system-ui,-apple-system,sans-serif" font-size="19"
+          font-weight="700" fill="#9ab6d2" text-anchor="middle">5</text>
+    <text x="692" y="368" font-family="system-ui,-apple-system,sans-serif" font-size="14"
+          font-weight="600" fill="#b3c6d8" text-anchor="middle">跟进</text>
+  </g>
+
+  <!-- 阶段说明卡 -->
+  <g filter="url(#fCard)">
+    <rect x="268" y="412" width="486" height="76" rx="16" fill="#ffffff" stroke="#e2ecf7" stroke-width="2"/>
+    <rect x="292" y="434" width="30" height="30" rx="9" fill="#fde8cd"/>
+    <path d="M300 449h14" stroke="#e59a3a" stroke-width="4" stroke-linecap="round"/>
+    <rect x="336" y="436" width="132" height="11" rx="5.5" fill="#c9dcef"/>
+    <rect x="336" y="456" width="196" height="9" rx="4.5" fill="#e2ecf7"/>
+  </g>
+
+  <g opacity="0.9">
+    <circle cx="176" cy="238" r="9" fill="#9fc8ee"/>
+    <circle cx="154" cy="268" r="6" fill="#f2a33c"/>
+    <circle cx="828" cy="452" r="8" fill="#9fc8ee"/>
+    <circle cx="850" cy="472" r="5" fill="#f2a33c"/>
+  </g>
+</svg>

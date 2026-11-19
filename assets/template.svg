@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="102 60 820 512" width="820" height="512" role="img" aria-label="现场会 PPT 模板：16:9 幻灯片、缩略图导航与页码">
+  <defs>
+    <linearGradient id="tbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2f8ff"/><stop offset="1" stop-color="#e6f1fd"/>
+    </linearGradient>
+    <linearGradient id="tslide" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f7fbff"/>
+    </linearGradient>
+    <linearGradient id="tbar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5ba3e8"/><stop offset="1" stop-color="#3b82c9"/>
+    </linearGradient>
+    <filter id="tShadow" x="-22%" y="-22%" width="150%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#1b4f8a" flood-opacity="0.16"/>
+    </filter>
+    <filter id="tChip" x="-30%" y="-30%" width="170%" height="170%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#1b4f8a" flood-opacity="0.13"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1024" height="640" fill="url(#tbg)"/>
+  <circle cx="896" cy="130" r="130" fill="#dcecff" opacity="0.6"/>
+  <circle cx="134" cy="530" r="106" fill="#dcecff" opacity="0.55"/>
+
+  <!-- 主幻灯片 16:9 -->
+  <g filter="url(#tShadow)">
+    <rect x="222" y="128" width="470" height="288" rx="10" fill="url(#tslide)" stroke="#dbe8f6" stroke-width="2"/>
+  </g>
+  <!-- 幻灯片版式：左侧标题与要点 -->
+  <rect x="288" y="172" width="168" height="18" rx="9" fill="#2f6fb5" opacity="0.9"/>
+  <rect x="288" y="202" width="104" height="9" rx="4.5" fill="#c9dcef"/>
+  <g>
+    <rect x="288" y="240" width="14" height="14" rx="4" fill="#3b82c9"/>
+    <rect x="312" y="242" width="126" height="9" rx="4.5" fill="#dbe8f6"/>
+    <rect x="288" y="268" width="14" height="14" rx="4" fill="#3b82c9"/>
+    <rect x="312" y="270" width="100" height="9" rx="4.5" fill="#dbe8f6"/>
+    <rect x="288" y="296" width="14" height="14" rx="4" fill="#3b82c9"/>
+    <rect x="312" y="298" width="112" height="9" rx="4.5" fill="#dbe8f6"/>
+    <rect x="288" y="324" width="14" height="14" rx="4" fill="#3b82c9"/>
+    <rect x="312" y="326" width="88" height="9" rx="4.5" fill="#dbe8f6"/>
+  </g>
+
+  <!-- 图表区 -->
+  <g>
+    <rect x="474" y="290" width="44" height="76" rx="7" fill="#cfe4f8"/>
+    <rect x="532" y="266" width="44" height="100" rx="7" fill="#8ec4f0"/>
+    <rect x="590" y="238" width="44" height="128" rx="7" fill="url(#tbar)"/>
+    <rect x="648" y="258" width="44" height="108" rx="7" fill="#2f6fb5"/>
+    <line x1="462" y1="366" x2="704" y2="366" stroke="#dde9f6" stroke-width="3"/>
+    <polyline points="496,272 554,248 612,220 670,240" fill="none" stroke="#f2a33c"
+              stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="670" cy="240" r="6.5" fill="#fff" stroke="#f2a33c" stroke-width="4"/>
+  </g>
+
+  <!-- 页码 -->
+  <text x="712" y="400" font-family="system-ui,-apple-system,'Helvetica Neue',sans-serif"
+        font-size="15" font-weight="700" fill="#9ab6d2" text-anchor="end">7 / 77</text>
+
+  <!-- 缩略图导航列 -->
+  <g filter="url(#tChip)">
+    <rect x="716" y="128" width="82" height="288" rx="12" fill="#ffffff" stroke="#e2ecf7" stroke-width="2"/>
+  </g>
+  <g>
+    <rect x="728" y="146" width="62" height="35" rx="5" fill="#eef6fe" stroke="#3b82c9" stroke-width="2.5"/>
+    <rect x="735" y="153" width="22" height="5" rx="2.5" fill="#3b82c9"/>
+    <rect x="735" y="163" width="36" height="4" rx="2" fill="#bfdcf5"/>
+
+    <rect x="728" y="192" width="62" height="35" rx="5" fill="#f8fbff" stroke="#e2ecf7" stroke-width="2"/>
+    <rect x="735" y="199" width="22" height="5" rx="2.5" fill="#cfe4f8"/>
+    <rect x="735" y="209" width="36" height="4" rx="2" fill="#e6eff9"/>
+
+    <rect x="728" y="238" width="62" height="35" rx="5" fill="#f8fbff" stroke="#e2ecf7" stroke-width="2"/>
+    <rect x="735" y="245" width="22" height="5" rx="2.5" fill="#cfe4f8"/>
+    <rect x="735" y="255" width="36" height="4" rx="2" fill="#e6eff9"/>
+
+    <rect x="728" y="284" width="62" height="35" rx="5" fill="#f8fbff" stroke="#e2ecf7" stroke-width="2"/>
+    <rect x="735" y="291" width="22" height="5" rx="2.5" fill="#cfe4f8"/>
+    <rect x="735" y="301" width="36" height="4" rx="2" fill="#e6eff9"/>
+
+    <rect x="728" y="330" width="62" height="35" rx="5" fill="#f8fbff" stroke="#e2ecf7" stroke-width="2"/>
+    <rect x="735" y="337" width="22" height="5" rx="2.5" fill="#cfe4f8"/>
+    <rect x="735" y="347" width="36" height="4" rx="2" fill="#e6eff9"/>
+  </g>
+
+  <!-- 播放按钮 -->
+  <g filter="url(#tChip)">
+    <circle cx="316" cy="470" r="30" fill="#f2a33c"/>
+    <path d="M309 456l21 14-21 14z" fill="#ffffff"/>
+  </g>
+
+  <!-- 版式提示条 -->
+  <g>
+    <rect x="376" y="458" width="120" height="10" rx="5" fill="#c9dcef"/>
+    <rect x="376" y="478" width="196" height="9" rx="4.5" fill="#dde9f6"/>
+  </g>
+
+  <g opacity="0.9">
+    <circle cx="186" cy="196" r="9" fill="#9fc8ee"/>
+    <circle cx="164" cy="226" r="6" fill="#f2a33c"/>
+    <circle cx="850" cy="474" r="8" fill="#9fc8ee"/>
+    <circle cx="872" cy="494" r="5" fill="#f2a33c"/>
+  </g>
+</svg>

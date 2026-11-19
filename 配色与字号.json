@@ -1,0 +1,124 @@
+{
+  "palettes": {
+    "air-blue": {
+      "name": "清透蓝",
+      "brand": "#0B1B2B",
+      "accent": "#0A6ED1",
+      "bg": "#F7F9FC",
+      "soft": "#EAF4FE",
+      "text": "#1E2D3D",
+      "muted": "#526579",
+      "border": "#E8EDF3"
+    },
+    "ink": {
+      "name": "墨黑灰",
+      "brand": "#242830",
+      "accent": "#48576B",
+      "bg": "#F3F4F6",
+      "soft": "#E9EDF2",
+      "text": "#272F3B",
+      "muted": "#596370",
+      "border": "#D4D9E0"
+    },
+    "forest": {
+      "name": "松绿",
+      "brand": "#214B3F",
+      "accent": "#28715A",
+      "bg": "#F2F7F4",
+      "soft": "#E5F1EA",
+      "text": "#263F35",
+      "muted": "#536A5E",
+      "border": "#CDDCD2"
+    },
+    "sand": {
+      "name": "暖米金",
+      "brand": "#5E4630",
+      "accent": "#875B24",
+      "bg": "#F8F5F0",
+      "soft": "#F4E9D8",
+      "text": "#42382F",
+      "muted": "#746352",
+      "border": "#E0D5C7"
+    },
+    "slate": {
+      "name": "雾蓝灰",
+      "brand": "#34455B",
+      "accent": "#4C6584",
+      "bg": "#F2F5F8",
+      "soft": "#E7EDF5",
+      "text": "#2C3D51",
+      "muted": "#5E6E80",
+      "border": "#D0DAE5"
+    },
+    "burgundy": {
+      "name": "酒红",
+      "brand": "#612C3C",
+      "accent": "#924358",
+      "bg": "#FAF4F5",
+      "soft": "#F6E7EC",
+      "text": "#482E37",
+      "muted": "#785B66",
+      "border": "#E5CFD7"
+    },
+    "teal": {
+      "name": "湖水青",
+      "brand": "#20494B",
+      "accent": "#1B737A",
+      "bg": "#F1F7F7",
+      "soft": "#E2F2F1",
+      "text": "#263D40",
+      "muted": "#526B6E",
+      "border": "#CBDFDF"
+    },
+    "violet": {
+      "name": "雅紫",
+      "brand": "#453659",
+      "accent": "#70518C",
+      "bg": "#F7F4FA",
+      "soft": "#EDE5F4",
+      "text": "#3B3444",
+      "muted": "#6A5C76",
+      "border": "#DDD2E7"
+    },
+    "clay": {
+      "name": "陶土橙",
+      "brand": "#603C2D",
+      "accent": "#A04F2F",
+      "bg": "#FAF5F1",
+      "soft": "#F6E6DB",
+      "text": "#46362E",
+      "muted": "#776051",
+      "border": "#E7D5CA"
+    },
+    "olive": {
+      "name": "橄榄灰",
+      "brand": "#42482D",
+      "accent": "#626B32",
+      "bg": "#F6F7F1",
+      "soft": "#EAEEDC",
+      "text": "#363E2B",
+      "muted": "#626D53",
+      "border": "#D9DFCB"
+    }
+  },
+  "shell_modes": [
+    "light",
+    "dark"
+  ],
+  "type_scales": {
+    "standard": {
+      "--fs-cover": "2.5rem",
+      "--fs-title": "1.75rem",
+      "--fs-h3": "1.3125rem",
+      "--fs-cardtitle": "1.1875rem",
+      "--fs-body": "1.0625rem"
+    },
+    "presentation": {
+      "--fs-cover": "2.875rem",
+      "--fs-title": "2rem",
+      "--fs-h3": "1.5rem",
+      "--fs-cardtitle": "1.3125rem",
+      "--fs-body": "1.125rem"
+    }
+  }
+}
