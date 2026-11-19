@@ -846,6 +846,26 @@ html[data-shell=dark] .sidebar{color-scheme:dark;scrollbar-color:var(--nav-muted
 .nav-group-links .nav-dot{display:block;background:var(--muted);opacity:.35}
 .nav-group-links .target-current .nav-dot{background:var(--accent);opacity:1}
 
+/* Source Han families have their own optical hierarchy; MiSans retains its baseline. */
+html[data-font^="source-han-"]{--cover-title-weight:var(--weight-title);--cover-description-weight:var(--weight-body)}
+html[data-font^="source-han-"] body{font-weight:var(--weight-body)}
+html[data-font^="source-han-"] :is(.body-text,.card-body,.callout-body,.cmp-side p,.bubble,.sl-line,.hw-fold-body,.hw-check-desc,.resource-desc,.portal-hero .portal-hero-inner>p){font-weight:var(--weight-body)}
+html[data-font^="source-han-"] :is(.section h2,.portal-hero .portal-hero-inner>h1){font-weight:var(--weight-title)}
+html[data-font^="source-han-"] :is(.section h3,.section h4,.subhead,.hw-title,.sl-h){font-weight:var(--weight-subheading)}
+html[data-font^="source-han-"] :is(.card-title,.pick-card .card-title,.pick-card.on .card-title){font-weight:var(--weight-card)!important}
+html[data-font^="source-han-"] :is(.faq summary,.scriptlib .sl-group>summary,.sl-flat-h,.qr-title,.hw-fold-title,.hw-check-title,.catalog-row b,.category-card b,.resource-title){font-weight:var(--weight-card)}
+html[data-font^="source-han-"] :is(.sidebar .nav-group-title,.sidebar .nav-link.nav-bare){font-weight:var(--weight-navigation)}
+html[data-font^="source-han-"] .sidebar .nav-group-links .nav-link{font-weight:var(--weight-body)}
+html[data-font^="source-han-"] .sidebar .nav-group-links .nav-link.target-current{font-weight:var(--weight-medium)}
+html[data-font^="source-han-"] :is(.data-table th,.rt table th,.data-table caption,.rt-cap b,.rs-head b){font-weight:var(--weight-table)}
+html[data-font^="source-han-"] :is(.data-table td,.rt table td){font-weight:var(--weight-body)}
+html[data-font^="source-han-"] :is(strong,b){font-weight:var(--weight-emphasis)}
+html[data-font^="source-han-"] :is(.lede,.quote,.home-btn,.pager-btn,.tab-head,.tabset.tabset-bar>.tab-heads>.tab-head,.cover-start,.preview-toolbar button,.atlas-link,.resource-action,.mm-name,.mm-act-label,.topbar-title .project-name){font-weight:var(--weight-medium)}
+html[data-font^="source-han-"] :is(.stat-num,.stat-num .stat-prefix,.stat-num .stat-suffix,.tt-v,.cm-total){font-weight:var(--weight-metric)}
+html[data-font^="source-han-"] :is(.sec-sub,.card-sub,.stat-note,.design-credit,.topbar-title .document-name,.cover .cover-kicker,.cover-meta,.library-about dd,.cm-data-note){font-weight:var(--weight-note)}
+html[data-font^="source-han-"] .cm-zone h4{font-weight:var(--weight-card)!important}
+html[data-font^="source-han-"] .cm-label{font-family:var(--sans);font-weight:var(--weight-medium)}
+
 .hw-checklist{border:0;padding:0;min-inline-size:0;margin:1rem 0;display:grid;gap:.75rem}
 .hw-checklist>legend{font-size:var(--fs-cardtitle);font-weight:var(--weight-title,500);color:var(--brand);margin-block-end:1rem}
 .hw-check-row{display:flex;align-items:center;gap:1rem;padding:1rem 1.25rem;min-block-size:4rem;border:1px solid var(--border);border-radius:var(--r-ctl);background:var(--surface);cursor:pointer;min-inline-size:0}
