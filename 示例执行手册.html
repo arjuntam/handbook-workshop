@@ -1090,7 +1090,7 @@ html[data-font^="source-han-"] .cm-label{font-family:var(--sans);font-weight:var
 .hw-audio-bar{display:grid;grid-template-columns:auto minmax(4rem,1fr) auto auto;align-items:center;gap:.875rem;min-inline-size:0}
 .hw-audio-bar[hidden],.hw-audio-picker[hidden]{display:none!important}
 .hw-audio-play{inline-size:2.75rem;block-size:2.75rem;border:0;border-radius:50%;background:var(--brand);color:var(--surface);display:grid;place-items:center;cursor:pointer;flex:none}
-.hw-audio-play svg{inline-size:1.125rem;block-size:1.125rem;fill:currentColor}.hw-audio-pause-icon,.hw-audio[data-state=playing] .hw-audio-play-icon{display:none}.hw-audio[data-state=playing] .hw-audio-pause-icon{display:block}
+.hw-audio-play svg{inline-size:1.125rem;block-size:1.125rem;fill:currentColor}.hw-audio-pause-icon,.hw-audio-play.is-playing .hw-audio-play-icon{display:none}.hw-audio-play.is-playing .hw-audio-pause-icon{display:block}
 .hw-audio-seek{appearance:none;-webkit-appearance:none;inline-size:100%;min-inline-size:0;block-size:.5rem;border-radius:999px;background:linear-gradient(to right,var(--brand) var(--p,0%),var(--border) var(--p,0%));cursor:pointer;margin:0}
 .hw-audio-seek::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;inline-size:1rem;block-size:1rem;border-radius:50%;background:var(--surface);border:2px solid var(--brand)}
 .hw-audio-seek::-moz-range-thumb{inline-size:1rem;block-size:1rem;border-radius:50%;background:var(--surface);border:2px solid var(--brand)}
@@ -2022,7 +2022,7 @@ if(!('CommandEvent' in window)){
   const host=root.dataset.tabset?[...section.querySelectorAll('.tabset')].find(x=>x.dataset.tabsKey===root.dataset.tabset):null;
   players.push({root,audio,host});
   const fmt=n=>Number.isFinite(n)?String(Math.floor(n/60)).padStart(2,'0')+':'+String(Math.floor(n%60)).padStart(2,'0'):'--:--';
-  function state(value,message){root.dataset.state=value;play.setAttribute('aria-label',value==='playing'?'暂停录音':'播放录音');if(message!==undefined)note.textContent=message;}
+  function state(value,message){root.dataset.state=value;const active=value==='playing'||value==='loading'&&!audio.paused;play.classList.toggle('is-playing',active);play.setAttribute('aria-label',active?'暂停录音':'播放录音');if(message!==undefined)note.textContent=message;}
   function paint(){
    const duration=audio.duration,position=audio.currentTime||0,p=Number.isFinite(duration)&&duration>0?position/duration*100:0;
    seek.value=String(p);seek.style.setProperty('--p',p+'%');seek.disabled=!Number.isFinite(duration)||duration<=0||root.dataset.state==='error';
@@ -2044,7 +2044,9 @@ if(!('CommandEvent' in window)){
    try{await audio.play();}
    catch(error){if(token!==generation||!current?.src)return;if(error.name==='AbortError'&&audio.paused){state('paused','已暂停');return;}state('error',error.name==='NotAllowedError'?'播放未获允许，请再次点击':'录音加载失败，请检查文件或地址');play.disabled=false;seek.disabled=true;}
   });
-  audio.addEventListener('play',()=>{players.forEach(p=>{if(p.audio!==audio)p.audio.pause();});state('playing','播放中');});
+  audio.addEventListener('play',()=>{players.forEach(p=>{if(p.audio!==audio)p.audio.pause();});state('loading','正在加载录音');});
+  audio.addEventListener('playing',()=>state('playing','播放中'));
+  audio.addEventListener('waiting',()=>{if(!audio.paused)state('loading','正在缓冲录音');});
   audio.addEventListener('pause',()=>{if(current?.src&&['playing','loading'].includes(root.dataset.state))state('paused','已暂停');});
   audio.addEventListener('ended',()=>state('paused','播放结束，可重新播放'));
   audio.addEventListener('error',()=>{if(!current?.src||!audio.hasAttribute('src'))return;state('error','录音加载失败，请检查文件或地址');seek.disabled=true;});

@@ -1084,7 +1084,7 @@ html[data-font^="source-han-"] .cm-label{font-family:var(--sans);font-weight:var
 .hw-audio-bar{display:grid;grid-template-columns:auto minmax(4rem,1fr) auto auto;align-items:center;gap:.875rem;min-inline-size:0}
 .hw-audio-bar[hidden],.hw-audio-picker[hidden]{display:none!important}
 .hw-audio-play{inline-size:2.75rem;block-size:2.75rem;border:0;border-radius:50%;background:var(--brand);color:var(--surface);display:grid;place-items:center;cursor:pointer;flex:none}
-.hw-audio-play svg{inline-size:1.125rem;block-size:1.125rem;fill:currentColor}.hw-audio-pause-icon,.hw-audio[data-state=playing] .hw-audio-play-icon{display:none}.hw-audio[data-state=playing] .hw-audio-pause-icon{display:block}
+.hw-audio-play svg{inline-size:1.125rem;block-size:1.125rem;fill:currentColor}.hw-audio-pause-icon,.hw-audio-play.is-playing .hw-audio-play-icon{display:none}.hw-audio-play.is-playing .hw-audio-pause-icon{display:block}
 .hw-audio-seek{appearance:none;-webkit-appearance:none;inline-size:100%;min-inline-size:0;block-size:.5rem;border-radius:999px;background:linear-gradient(to right,var(--brand) var(--p,0%),var(--border) var(--p,0%));cursor:pointer;margin:0}
 .hw-audio-seek::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;inline-size:1rem;block-size:1rem;border-radius:50%;background:var(--surface);border:2px solid var(--brand)}
 .hw-audio-seek::-moz-range-thumb{inline-size:1rem;block-size:1rem;border-radius:50%;background:var(--surface);border:2px solid var(--brand)}
