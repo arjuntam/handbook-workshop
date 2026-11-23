@@ -216,13 +216,16 @@
       "id": "flow",
       "name": "流程与导航",
       "description": "讲步骤、排时间、看阶段、找章节。",
-      "hint": "先后动作选步骤流程；明确时间选时间流程单；判断两条路径选分流决策；章节入口选导航卡。",
+      "hint": "先后动作选步骤流程；明确时间选时间流程单；判断两条路径选分流决策；章节入口选导航卡；章首用扉页、内页用回跳条，长节内用分区条。",
       "types": [
         "steps",
         "runsheet",
         "metro",
         "decision",
-        "chapter_nav"
+        "chapter_nav",
+        "chapter_cover",
+        "back_link",
+        "section_jump"
       ],
       "styles": [
         {
@@ -254,6 +257,24 @@
           "name": "章节导航卡",
           "scope": "章节扉页列出本章内容与阅读顺序",
           "section": "blk-chapter_nav"
+        },
+        {
+          "id": "L21-A",
+          "name": "章节扉页",
+          "scope": "大章或赛道开篇，说明阅读顺序与每节用途并提供首个入口",
+          "section": "blk-chapter_cover"
+        },
+        {
+          "id": "L21-B",
+          "name": "章节回跳条",
+          "scope": "从总览进入的内页，提供明确的返回上层入口",
+          "section": "blk-back_link"
+        },
+        {
+          "id": "L21-C",
+          "name": "节内分区条",
+          "scope": "一个长章节包含多个明确分区，读者需要跳读",
+          "section": "blk-section_jump"
         }
       ]
     },
@@ -299,13 +320,14 @@
       "id": "media",
       "name": "图片与资料",
       "description": "展示图片、浏览图册、打开或下载资料。",
-      "hint": "一张图用原图；多张图按并列、顺序或主图选择画廊；手册入口用封面卡；下载文件用附件区。",
+      "hint": "一张图用原图；多张图按并列、顺序或主图选择画廊；手册入口用封面卡；下载文件用附件区；配套短录音使用录音播放条。",
       "types": [
         "img",
         "imgs",
         "resources",
         "note",
         "downloads",
+        "audio",
         "html"
       ],
       "styles": [
@@ -350,6 +372,12 @@
           "name": "就地附件下载区",
           "scope": "当前章节有明确对应附件，在内容旁提供入口",
           "section": "blk-downloads"
+        },
+        {
+          "id": "L26",
+          "name": "录音播放条",
+          "scope": "短录音与文字说明搭配，独立选择或与同节标签对应",
+          "section": "blk-audio"
         },
         {
           "id": "X01",
@@ -799,6 +827,42 @@
       "category_name": "流程与导航"
     },
     {
+      "id": "L21-A",
+      "type": "chapter_cover",
+      "name": "章节扉页",
+      "scope": "大章或赛道开篇，说明阅读顺序与每节用途并提供首个入口",
+      "avoid": "少于两节的章；普通内容页重复目录；整站封面",
+      "interaction": "整卡与主按钮跳转真实章节，同步目录与翻页栏",
+      "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
+      "states": "默认/悬停/键盘焦点；入口不冒充选择或完成状态",
+      "category": "flow",
+      "category_name": "流程与导航"
+    },
+    {
+      "id": "L21-B",
+      "type": "back_link",
+      "name": "章节回跳条",
+      "scope": "从总览进入的内页，提供明确的返回上层入口",
+      "avoid": "顶层页或已含相同相关章节入口时重复堆放",
+      "interaction": "原生按钮跳回指定章节，支持键盘",
+      "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
+      "states": "默认/悬停/键盘焦点；入口不冒充选择或完成状态",
+      "category": "flow",
+      "category_name": "流程与导航"
+    },
+    {
+      "id": "L21-C",
+      "type": "section_jump",
+      "name": "节内分区条",
+      "scope": "一个长章节包含多个明确分区，读者需要跳读",
+      "avoid": "跨章节跳转；没有稳定目标的小标题",
+      "interaction": "按当前章节的显式锚点滚动并聚焦，支持减少动态",
+      "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
+      "states": "默认/悬停/键盘焦点；入口不冒充选择或完成状态",
+      "category": "flow",
+      "category_name": "流程与导航"
+    },
+    {
       "id": "L22",
       "type": "checklist",
       "name": "复选清单",
@@ -845,6 +909,18 @@
       "states": "默认对象/当前行/键盘焦点/无对象/详情待补；选择仅更新本组件，不保存或跳页",
       "category": "data",
       "category_name": "数据与对照"
+    },
+    {
+      "id": "L26",
+      "type": "audio",
+      "name": "录音播放条",
+      "scope": "短录音与文字说明搭配，独立选择或与同节标签对应",
+      "avoid": "缺源时伪装播放；长讲座；依靠标签名称猜录音",
+      "interaction": "播放/暂停、进度、倍速；按稳定标识换源；缺失和失败明确显示",
+      "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
+      "states": "可播放/加载中/播放/暂停/结束/待补/失败；切换标签和离开章节停止旧录音",
+      "category": "media",
+      "category_name": "图片与资料"
     },
     {
       "id": "A01",
