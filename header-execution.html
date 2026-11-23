@@ -1029,6 +1029,24 @@ html[data-font^="source-han-"] .cm-label{font-family:var(--sans);font-weight:var
 .hw-matrix-legend li{display:flex;align-items:center;gap:.375rem}
 @media(forced-colors:active){.hw-data-choice[aria-pressed=true]{outline:2px solid Highlight}.hw-data-bar{border:1px solid CanvasText}.hw-data-bar i{background:Highlight;forced-color-adjust:none}}
 
+.search-results[hidden]{display:none!important}
+.search-results{position:absolute;inset-block-start:calc(100% + .625rem);inset-inline-end:0;inline-size:min(36rem,calc(100vw - 2rem));max-block-size:min(70vh,42rem);overflow:auto;overscroll-behavior:contain;background:var(--surface,#fff);color:var(--text);border:1px solid var(--border);border-radius:var(--r-card,1rem);box-shadow:0 .75rem 2.5rem #10203026;z-index:50;text-align:start}
+.search-results-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.75rem 1rem;border-block-end:1px solid var(--border)}
+.search-count{font-size:var(--fs-note);line-height:1.6;margin:0;color:var(--muted)}
+.search-close{font:inherit;font-size:var(--fs-note);background:transparent;color:var(--accent);border:0;cursor:pointer;padding:.5rem;min-block-size:2.5rem}
+.search-result-list{list-style:none;margin:0;padding:.375rem}
+.search-result{display:block;inline-size:100%;border:0;border-radius:.5rem;background:transparent;color:var(--text);font:inherit;text-align:start;padding:.875rem;cursor:pointer}
+.search-result:hover{background:var(--bg)}
+.search-result:focus-visible,.search-close:focus-visible{outline:2px solid var(--focus,var(--accent));outline-offset:-2px;background:var(--selected-bg)}
+.search-result-title{display:block;color:var(--brand);font-size:var(--fs-text);font-weight:var(--weight-title,500);line-height:1.6}
+.search-result-snippet{display:block;font-size:var(--fs-note);line-height:1.75;margin-block-start:.25rem;color:var(--muted);overflow-wrap:anywhere}
+.search-results mark{background:var(--accent-soft);color:var(--brand);font-weight:var(--weight-title,500);text-decoration:underline;text-underline-offset:.15em}
+.search-help{margin:0;padding:.625rem 1rem .875rem;font-size:var(--fs-note);line-height:1.7;color:var(--muted);border-block-start:1px solid var(--border)}
+::highlight(handbook-search){background-color:var(--accent-soft);color:var(--brand);text-decoration:underline}
+.search-target{outline:2px solid var(--accent);outline-offset:4px;scroll-margin-block:6rem 8rem}
+.search-box input:focus-visible{outline:2px solid var(--focus,var(--accent));outline-offset:2px}
+@media(forced-colors:active){.search-results mark{background:Highlight;color:HighlightText}.search-target{outline-color:Highlight}}
+
 /* ── 令牌：字号用 rem，跟随系统/浏览器文字缩放；间距取 8 的倍数 ── */
 :root{
   --fs-title:1.75rem;--fs-h3:1.3125rem;--fs-cardtitle:1.1875rem;
@@ -1164,8 +1182,14 @@ figure figcaption,.gallery-item figcaption{font-size:var(--fs-note)}
   <div class="brand"><img class="brand-logo" src="assets/logo.png" alt="大金 DAIKIN"></div>
   <div class="topbar-title"><span class="project-name">城市合伙人</span><span class="document-name"> · 启动会执行手册</span></div>
   <div class="topbar-sp"></div>
-  <div class="search-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
-    <input type="search" placeholder="搜索章节 / 关键词" aria-label="搜索章节"></div>
+  <search class="search-box" aria-label="当前手册全文搜索"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+    <label class="sr-only" for="handbook-search-6">搜索全文</label>
+    <input id="handbook-search-6" type="search" name="q" placeholder="搜索全文 / 章节 / 关键词" aria-controls="handbook-search-6-results" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" enterkeyhint="search">
+    <div class="search-results" id="handbook-search-6-results" hidden>
+      <div class="search-results-head"><p class="search-count" role="status" aria-atomic="true"></p><button type="button" class="search-close">收起</button></div>
+      <ol class="search-result-list" role="list"></ol>
+      <p class="search-help">搜索本手册的标题与正文，包含折叠内容。多个词用空格分隔；不包含图片内文字和附件内部内容。</p>
+    </div></search>
   
   
   <button type="button" class="home-btn" id="home-btn" title="回到封面" aria-label="回到封面">
