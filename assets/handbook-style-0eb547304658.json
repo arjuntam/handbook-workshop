@@ -1,0 +1,11 @@
+{
+  "palette": "air-blue",
+  "shell_mode": "light",
+  "font_family": "misans",
+  "type_scale": "standard",
+  "type_scale_factor": 1,
+  "logo_header_height": 28,
+  "logo_cover_height": 48,
+  "style_preset": "apple",
+  "theme": {}
+}
