@@ -1070,10 +1070,6 @@ html[data-font^="source-han-"] .cm-label{font-family:var(--sans);font-weight:var
 @container hw-cover (inline-size < 32rem){.hw-cover-grid{grid-template-columns:1fr}}
 .hw-back-link{margin-block-start:1.75rem;padding-block-start:1rem;border-block-start:1px dashed var(--border)}
 .hw-back-link .xref-chip{gap:.5rem}
-.hw-section-jump{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem;padding:.875rem 1rem;border-radius:var(--r-ctl);background:var(--accent-soft);margin-block:1rem}
-.hw-section-jump>span{color:var(--brand);font-size:var(--fs-note);font-weight:var(--weight-title,500);margin-inline-end:.5rem}
-.hw-section-jump button{font:inherit;font-size:var(--fs-note);padding:.5rem .875rem;border:1px solid var(--border);border-radius:999px;background:var(--surface);color:var(--brand);cursor:pointer;min-block-size:2.75rem}
-.hw-section-jump button:hover{border-color:var(--accent)}.hw-anchor{scroll-margin-block:6rem 8rem}
 .hw-cover-card:focus-visible,.hw-cover-action button:focus-visible,.hw-section-jump button:focus-visible,.hw-anchor:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 .hw-audio{container:hw-audio/inline-size;min-inline-size:0;padding:1rem 1.25rem;margin-block:1rem;border:1px solid var(--border);border-radius:var(--r-card);background:var(--surface);color:var(--text)}
 .hw-audio-head{display:flex;align-items:center;flex-wrap:wrap;gap:.625rem;margin-block-end:.75rem}
@@ -1094,6 +1090,17 @@ html[data-font^="source-han-"] .cm-label{font-family:var(--sans);font-weight:var
 .hw-audio.is-enhanced audio{display:none}.hw-audio audio{max-inline-size:100%}.hw-audio-transcript{font-size:var(--fs-note);line-height:1.75;color:var(--muted);margin:.875rem 0 0}.hw-audio-transcript:empty{display:none}
 @container hw-audio (inline-size < 30rem){.hw-audio-bar{grid-template-columns:auto minmax(4rem,1fr) auto}.hw-audio-time{grid-column:2;grid-row:2}.hw-audio-rate{grid-column:3;grid-row:1 / 3}.hw-audio-note{margin-inline-start:0}}
 @media(forced-colors:active){.hw-audio-seek{appearance:auto;-webkit-appearance:auto}.hw-cover-card{border-color:ButtonText}}
+
+.hw-section-jump{display:flex;align-items:center;gap:.75rem;padding:.5rem .75rem;border:1px solid var(--border);border-radius:var(--r-ctl);background:var(--surface);margin-block:1rem;min-inline-size:0}
+.hw-section-jump.is-primary{position:sticky;top:var(--hw-section-top,60px);z-index:30}
+.hw-section-jump.is-stuck{box-shadow:0 4px 12px #0000000d}
+.hw-section-jump>span{flex:none;color:var(--muted);font-size:var(--fs-note);font-weight:var(--weight-title,500);white-space:nowrap}
+.hw-section-jump-links{display:flex;align-items:center;gap:.375rem;min-inline-size:0;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:thin;padding:6px}
+.hw-section-jump button{flex:none;white-space:nowrap;font:inherit;font-size:var(--fs-note);line-height:1.5;padding:.375rem .75rem;border:1px solid transparent;border-radius:999px;background:transparent;color:var(--text);cursor:pointer;min-block-size:2.75rem}
+.hw-section-jump button:hover{background:var(--accent-soft)}
+.hw-section-jump button[aria-current=location]{background:var(--accent-soft);color:var(--accent);border-color:var(--accent);font-weight:var(--weight-title,600)}
+.hw-anchor{scroll-margin-block-start:var(--hw-anchor-offset,8rem);scroll-margin-block-end:8rem}
+@media print{.hw-section-jump.is-primary{position:static;box-shadow:none}.hw-section-jump-links{flex-wrap:wrap;overflow:visible}}
 
 /* ── 令牌：字号用 rem，跟随系统/浏览器文字缩放；间距取 8 的倍数 ── */
 :root{
