@@ -1,5 +1,5 @@
-/* Handbook runtime 2.0.2; API 1 */
-(()=>{if(window.HandbookRuntime)return;window.HandbookRuntime=Object.freeze({"version": "2.0.2", "api": 1});
+/* Handbook runtime 2.0.3; API 1 */
+(()=>{if(window.HandbookRuntime)return;window.HandbookRuntime=Object.freeze({"version": "2.0.3", "api": 1});
 
 (function(){
  const ua=navigator.userAgent||'';

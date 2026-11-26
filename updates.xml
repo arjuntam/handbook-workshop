@@ -1,5 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0"><channel><title>网页手册样式库 · 更新</title><link>https://arjuntam.github.io/handbook-workshop/#updates</link><description>样式与功能的版本更新、适用范围和升级方式。</description><language>zh-CN</language><ttl>240</ttl><item><title>V2.0.2 · AI自助检查更新成为主入口</title><link>https://arjuntam.github.io/handbook-workshop/#release-notes</link><guid isPermaLink="false">handbook-workshop-release-2.0.2</guid><description>将AI检查并更新工具设为推荐入口，提供可复制和下载的一次检查提示词。
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><atom:link href="https://arjuntam.github.io/handbook-workshop/updates.xml" rel="self" type="application/rss+xml" /><title>网页手册样式库 · 更新</title><link>https://arjuntam.github.io/handbook-workshop/#updates</link><description>样式与功能的版本更新、适用范围和升级方式。</description><language>zh-CN</language><ttl>240</ttl><lastBuildDate>Thu, 26 Nov 2026 00:00:00 GMT</lastBuildDate><item><title>V2.0.3 · 一次配置RSS订阅，自动接收更新</title><link>https://arjuntam.github.io/handbook-workshop/#release-notes</link><guid isPermaLink="false">handbook-workshop-release-2.0.3</guid><description>主推“让AI配置更新订阅”，复用已有阅读器，添加正式RSS源并核对通知与后台条件。
+新增OPML订阅配置下载；订阅成功与通知启用分别核验，不把复制提示词当成已订阅。
+收到通知后按需下载安装；一次升级与AI定期检查收进折叠区。保留投稿入口和原有更新源地址。
+升级：更新订阅栏目复制提示词给AI执行一次配置；无需维护人逐人发通知。旧业务手册不会自动改写。</description><pubDate>Thu, 26 Nov 2026 00:00:00 GMT</pubDate></item><item><title>V2.0.2 · AI自助检查更新成为主入口</title><link>https://arjuntam.github.io/handbook-workshop/#release-notes</link><guid isPermaLink="false">handbook-workshop-release-2.0.2</guid><description>将AI检查并更新工具设为推荐入口，提供可复制和下载的一次检查提示词。
 新增可选定期检查提示词，要求平台真实建立任务，避免把会话内等待当作后台服务。
 提示词核对本地与线上版本，校验下载包，复用完整字体、另存更新，不降级或自动改写业务手册。
 移除邮件订阅与退订申请，维护人只需发布更新；投稿邮箱与AI整理投稿流程保留。

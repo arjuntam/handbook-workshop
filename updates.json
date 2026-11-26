@@ -1,13 +1,30 @@
 {
   "schema_version": 1,
-  "current_version": "2.0.2",
-  "update_mode": "agent-pull",
+  "current_version": "2.0.3",
+  "update_mode": "rss-subscription",
+  "notification_mode": "reader-managed",
+  "rss_url": "https://arjuntam.github.io/handbook-workshop/updates.xml",
+  "opml_url": "https://arjuntam.github.io/handbook-workshop/updates.opml",
   "release_manifest_url": "https://arjuntam.github.io/handbook-workshop/release.json",
   "prompts": {
+    "subscribe": "https://arjuntam.github.io/handbook-workshop/AI配置RSS订阅提示词.txt",
     "once": "https://arjuntam.github.io/handbook-workshop/AI检查更新提示词.txt",
     "watch": "https://arjuntam.github.io/handbook-workshop/AI定期检查提示词.txt"
   },
   "items": [
+    {
+      "version": "2.0.3",
+      "date": "2026-11-26",
+      "title": "一次配置RSS订阅，自动接收更新",
+      "changes": [
+        "主推“让AI配置更新订阅”，复用已有阅读器，添加正式RSS源并核对通知与后台条件。",
+        "新增OPML订阅配置下载；订阅成功与通知启用分别核验，不把复制提示词当成已订阅。",
+        "收到通知后按需下载安装；一次升级与AI定期检查收进折叠区。保留投稿入口和原有更新源地址。"
+      ],
+      "upgrade": "更新订阅栏目复制提示词给AI执行一次配置；无需维护人逐人发通知。旧业务手册不会自动改写。",
+      "scope": "样式库更新订阅与公开交付入口",
+      "boundary": "自动抓取和通知由阅读器负责，受刷新频率、套餐、后台与权限影响；复制提示词或下载OPML不等于完成订阅。"
+    },
     {
       "version": "2.0.2",
       "date": "2026-11-26",
