@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "current_version": "2.0.5",
+  "current_version": "2.0.6",
   "update_mode": "rss-subscription",
   "notification_mode": "reader-managed",
   "rss_url": "https://arjuntam.github.io/handbook-workshop/updates.xml",
@@ -12,6 +12,18 @@
     "watch": "https://arjuntam.github.io/handbook-workshop/AI定期检查提示词.txt"
   },
   "items": [
+    {
+      "version": "2.0.6",
+      "date": "2026-11-26",
+      "title": "恢复预设色块，自定义配置按需展开",
+      "changes": [
+        "修正装饰箭头清理误删无文字色块容器的问题，恢复十套预设的三色色块。清理仅限明确的箭头装饰，不删除一般视觉容器。",
+        "自定义配色、方案保存与导入默认折叠；清爽专业、温暖叙事和重点展示仍可直接选择。已保存配置与导出能力保留。",
+        "调整当前自定义方案的恢复顺序，避免刷新时先写入默认预览而覆盖正在使用的配色。"
+      ],
+      "upgrade": "刷新线上配色页面或打开新版离线样式库；旧业务项目可另存更新公共运行文件。",
+      "boundary": "不新增读者换色入口，不重置已有个人配色方案。旧交付与业务页面保留。"
+    },
     {
       "version": "2.0.5",
       "date": "2026-11-26",

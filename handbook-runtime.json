@@ -33,14 +33,14 @@
       "style_file": "assets/handbook-style-0eb547304658.json",
       "style_file_sha256": "f8b8d210d49732ed6e42804865ab5f66ba2295124b5e86a0bd7dacec6b01a9d1",
       "custom_sha256": "211d7d76f04019cf6b27cd34f5ded016eb0131f5b728689a0ccd426ff0704135",
-      "content_sha256": "7612b468da586e238a8b5e01a0f4b19aeec102d7695a260ea874fa490af7f083"
+      "content_sha256": "4ac4c5ecb1ca8fc28b3a6c0e285f313709fee870a28feb3f573246493108c4a9"
     }
   },
   "files": {
     "assets/handbook-runtime.css": "c50baa64ec0505718f4d544e58ff2a1c3884eab1287c4c8b509f5aa2a71ac3f0",
-    "assets/handbook-runtime.js": "2b8abe3ff3e8e2fa9260ef5205afbf474d407840a7abd00e8efb2e2042ca0657"
+    "assets/handbook-runtime.js": "aee0474e1fc74bb8923e08568e5e53991df2883f85fc93b31ec566e2ba662636"
   },
-  "runtime_version": "2.0.5",
+  "runtime_version": "2.0.6",
   "style_preset": "apple",
   "font_prefix": "assets/fonts/"
 }

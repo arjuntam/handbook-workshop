@@ -1,5 +1,5 @@
-/* Handbook runtime 2.0.5; API 1 */
-(()=>{if(window.HandbookRuntime)return;window.HandbookRuntime=Object.freeze({"version": "2.0.5", "api": 1});
+/* Handbook runtime 2.0.6; API 1 */
+(()=>{if(window.HandbookRuntime)return;window.HandbookRuntime=Object.freeze({"version": "2.0.6", "api": 1});
 
 (function(){
  const ua=navigator.userAgent||'';
@@ -828,7 +828,7 @@ document.querySelectorAll('.hw-chart').forEach(chart=>{chart.addEventListener('f
  trigger.addEventListener('click',()=>setCollapsed(!collapsed));close.addEventListener('click',()=>setCollapsed(true));document.addEventListener('keydown',e=>{if(e.key==='Escape'&&sidebar.contains(document.activeElement)){e.preventDefault();setCollapsed(true);}});
  sidebar.addEventListener('transitionend',e=>{if(e.propertyName==='transform'){window.dispatchEvent(new Event('resize'));currentIntoView();}});addEventListener('hb:sectionchange',()=>{sync();currentIntoView();});new MutationObserver(sync).observe(nav,{subtree:true,attributes:true,attributeFilter:['class','open']});sync();requestAnimationFrame(()=>requestAnimationFrame(()=>document.documentElement.classList.add('hw-directory-ready')));
  // Remove suffix decorations from text actions; keep arrows that are the entire control (paging, galleries).
- function simplifyActions(root){const controls=[...(root.matches?.('a,button')?[root]:[]),...root.querySelectorAll('a,button')];for(const el of controls){if(el.matches('#pager-prev,#pager-next')||el.textContent.trim().length<2)continue;const walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);let node;while(node=walk.nextNode()){const next=node.nodeValue.replace(/\s*[→↗↓]+\s*$/u,'');if(next!==node.nodeValue)node.nodeValue=next;}el.querySelectorAll('span[aria-hidden=true]').forEach(x=>{if(!x.textContent.trim()&&!x.querySelector('svg'))x.remove();});if(el.matches('.skill-download-header,[download]')&&el.textContent.trim())el.querySelectorAll('svg').forEach(x=>x.remove());}}
+ function simplifyActions(root){const controls=[...(root.matches?.('a,button')?[root]:[]),...root.querySelectorAll('a,button')];for(const el of controls){if(el.matches('#pager-prev,#pager-next')||el.textContent.trim().length<2)continue;const decorations=[...el.querySelectorAll('span[aria-hidden=true],.xc-arrow')].filter(x=>!x.children.length&&/^[→↗↓]+$/u.test(x.textContent.trim()));const walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);let node;while(node=walk.nextNode()){const next=node.nodeValue.replace(/\s*[→↗↓]+\s*$/u,'');if(next!==node.nodeValue)node.nodeValue=next;}decorations.forEach(x=>x.remove());if(el.matches('.skill-download-header,[download]')&&el.textContent.trim())el.querySelectorAll('svg').forEach(x=>x.remove());}}
  simplifyActions(document.body);new MutationObserver(rows=>{for(const row of rows)for(const node of row.addedNodes)if(node.nodeType===1)simplifyActions(node);}).observe(document.body,{childList:true,subtree:true});
 })();
 
