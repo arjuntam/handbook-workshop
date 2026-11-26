@@ -1410,6 +1410,9 @@ body>.topbar[data-surface=light] .menu-btn:focus-visible{outline-color:var(--foc
 .hw-directory .nav-group-links .nav-link:has(.hw-nav-code){display:grid;grid-template-columns:2.75rem minmax(0,1fr);gap:.375rem;align-items:baseline}
 .hw-nav-code{font-size:.75rem;line-height:1.55;font-weight:var(--weight-body,450);font-variant-numeric:tabular-nums;white-space:nowrap}
 .hw-nav-title{min-inline-size:0;overflow-wrap:anywhere}
+.hw-directory-reopen{position:fixed;inset-inline-start:.625rem;inset-block-start:calc(var(--header-height,3.75rem) + .25rem);z-index:45;display:inline-flex;align-items:center;justify-content:center;inline-size:2.5rem;block-size:2.5rem;padding:.5rem;border:1px solid var(--border);border-radius:.625rem;background:var(--surface);color:var(--brand);box-shadow:var(--shadow);cursor:pointer}
+body:not(.viewing) .hw-directory-reopen,body.mobile-blocked .hw-directory-reopen,.hw-directory-reopen[hidden]{display:none}.hw-directory-reopen svg{inline-size:1.25rem;block-size:1.25rem;flex:none}.hw-directory-reopen::after{content:'';position:absolute;inset:-2px}.hw-directory-reopen:focus-visible{outline:3px solid var(--focus);outline-offset:2px}.hw-directory-reopen:active{transform:translateY(1px)}
+@media(hover:hover){.hw-directory-reopen:hover{background:var(--accent-soft);color:var(--brand2)}}
 @media(hover:hover){.hw-directory :is(.nav-link,.nav-group-title,.hw-sidebar-toggle,.hw-drawer-close):hover{background:var(--nav-active-bg);color:var(--nav-text)}body>.topbar .menu-btn:hover{background:var(--accent-soft)}body>.topbar[data-surface=dark] .menu-btn:hover{background:var(--nav-active-bg)}}
 /* A single open/closed sidebar at every desktop window width; no icon rail. */
 :root{--sidebar-width:var(--hw-sidebar-expanded)}
@@ -1426,4 +1429,4 @@ body .pagerbar{inset-inline-start:var(--sidebar-width)}
 .hw-directory .hw-sidebar-toggle{display:inline-flex;inline-size:auto;min-inline-size:3rem;padding-inline:.5rem;font-size:.75rem}
 @media(prefers-reduced-motion:reduce){.hw-nav-chevron{transition:none}.hw-directory-ready body :is(.layout,.layout>.sidebar.hw-directory,.pagerbar){transition:none!important}.hw-directory :is(a,summary,button):active,body>.topbar .menu-btn:active{transform:none}}
 @media(forced-colors:active){.hw-directory .nav-link.target-current,.hw-directory .nav-group-title[data-current=true]{outline:1px solid Highlight}}
-@media print{.hw-directory,.hw-drawer-backdrop{display:none!important}body .layout{display:block}body .layout>main{inline-size:100%}}
+@media print{.hw-directory-reopen,.hw-directory,.hw-drawer-backdrop{display:none!important}body .layout{display:block}body .layout>main{inline-size:100%}}

@@ -33,14 +33,14 @@
       "style_file": "assets/handbook-style-0eb547304658.json",
       "style_file_sha256": "f8b8d210d49732ed6e42804865ab5f66ba2295124b5e86a0bd7dacec6b01a9d1",
       "custom_sha256": "211d7d76f04019cf6b27cd34f5ded016eb0131f5b728689a0ccd426ff0704135",
-      "content_sha256": "2ea79fb1051e42e5c607c3d98f40abbcdae53d8e95be9f6508153598412308a2"
+      "content_sha256": "7612b468da586e238a8b5e01a0f4b19aeec102d7695a260ea874fa490af7f083"
     }
   },
   "files": {
-    "assets/handbook-runtime.css": "1bdc27e783a3f02061a7f7b9e1125db6c1fdcf3cd21590de2cf967ab68feaf6c",
-    "assets/handbook-runtime.js": "fe9202faa4cf1c41349902ce5416c243cadb98886acf4a7b44a8d57b8b0bd0f2"
+    "assets/handbook-runtime.css": "c50baa64ec0505718f4d544e58ff2a1c3884eab1287c4c8b509f5aa2a71ac3f0",
+    "assets/handbook-runtime.js": "2b8abe3ff3e8e2fa9260ef5205afbf474d407840a7abd00e8efb2e2042ca0657"
   },
-  "runtime_version": "2.0.4",
+  "runtime_version": "2.0.5",
   "style_preset": "apple",
   "font_prefix": "assets/fonts/"
 }

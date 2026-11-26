@@ -1,5 +1,5 @@
-/* Handbook runtime 2.0.4; API 1 */
-(()=>{if(window.HandbookRuntime)return;window.HandbookRuntime=Object.freeze({"version": "2.0.4", "api": 1});
+/* Handbook runtime 2.0.5; API 1 */
+(()=>{if(window.HandbookRuntime)return;window.HandbookRuntime=Object.freeze({"version": "2.0.5", "api": 1});
 
 (function(){
  const ua=navigator.userAgent||'';
@@ -814,7 +814,7 @@ document.querySelectorAll('.hw-chart').forEach(chart=>{chart.addEventListener('f
 (()=>{
  const sidebar=document.querySelector('.layout > .sidebar'),main=document.querySelector('.layout > main'),header=document.querySelector('body > .topbar'),old=header?.querySelector('.menu-btn');
  if(!sidebar||!main||!header){if(old)old.hidden=true;return;}
- const trigger=old?old.cloneNode(true):document.createElement('button');old?.remove();trigger.type='button';trigger.className='menu-btn home-btn';trigger.dataset.directoryTrigger='true';trigger.textContent='目录';trigger.setAttribute('aria-controls','handbook-directory');header.insertBefore(trigger,header.querySelector('.skill-download-header,#home-btn'));
+ const trigger=document.createElement('button');old?.remove();trigger.type='button';trigger.className='hw-directory-reopen';trigger.dataset.directoryTrigger='true';trigger.setAttribute('aria-controls','handbook-directory');trigger.setAttribute('aria-label','打开目录');trigger.title='打开目录';trigger.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16m5-11 3 3-3 3"/></svg>';document.body.append(trigger);
  sidebar.id='handbook-directory';sidebar.classList.add('hw-directory');
  const hint=sidebar.querySelector('.side-hint')||document.createElement('div');hint.className='side-hint';hint.textContent='内容目录';
  const head=document.createElement('div');head.className='hw-directory-head';const close=document.createElement('button');close.type='button';close.className='hw-sidebar-toggle';close.textContent='收起';close.setAttribute('aria-label','收起目录');head.append(hint,close);sidebar.prepend(head);
@@ -823,8 +823,8 @@ document.querySelectorAll('.hw-chart').forEach(chart=>{chart.addEventListener('f
  nav.querySelectorAll('.nav-link').forEach(a=>{const label=a.textContent.trim();a.querySelector('.nav-dot')?.remove();const match=label.match(/^([A-Z]\d{2}(?:-[A-Z])?)\s+(.+)$/);if(match){const code=document.createElement('span'),name=document.createElement('span');code.className='hw-nav-code';code.textContent=match[1];name.className='hw-nav-title';name.textContent=match[2];a.replaceChildren(code,name);}});
  let collapsed=false;try{collapsed=localStorage.getItem('handbook-directory-collapsed')==='true';}catch(e){}
  function currentIntoView(){const current=nav.querySelector('.target-current');if(!collapsed&&current){const r=current.getBoundingClientRect(),n=nav.getBoundingClientRect();if(r.top<n.top||r.bottom>n.bottom)nav.scrollTop+=r.top-n.top-nav.clientHeight/3;}}
- function sync(){document.documentElement.classList.toggle('hw-nav-collapsed',collapsed);trigger.setAttribute('aria-expanded',String(!collapsed));trigger.setAttribute('aria-label',collapsed?'打开目录':'收起目录');sidebar.inert=collapsed;if(collapsed)sidebar.setAttribute('aria-hidden','true');else sidebar.removeAttribute('aria-hidden');nav.querySelectorAll('.nav-group').forEach(g=>{g.querySelector('.nav-group-title').dataset.current=String(!!g.querySelector('.target-current'));});}
- function setCollapsed(value){if(!!value===collapsed)return;if(value&&sidebar.contains(document.activeElement))trigger.focus({preventScroll:true});collapsed=!!value;sync();try{localStorage.setItem('handbook-directory-collapsed',String(collapsed));}catch(e){}window.dispatchEvent(new Event('resize'));if(!collapsed)currentIntoView();}
+ function sync(){document.documentElement.classList.toggle('hw-nav-collapsed',collapsed);trigger.setAttribute('aria-expanded',String(!collapsed));trigger.hidden=!collapsed;sidebar.inert=collapsed;if(collapsed)sidebar.setAttribute('aria-hidden','true');else sidebar.removeAttribute('aria-hidden');nav.querySelectorAll('.nav-group').forEach(g=>{g.querySelector('.nav-group-title').dataset.current=String(!!g.querySelector('.target-current'));});}
+ function setCollapsed(value){if(!!value===collapsed)return;const focusInside=sidebar.contains(document.activeElement)||document.activeElement===trigger;collapsed=!!value;sync();if(focusInside)(collapsed?trigger:close).focus({preventScroll:true});try{localStorage.setItem('handbook-directory-collapsed',String(collapsed));}catch(e){}window.dispatchEvent(new Event('resize'));if(!collapsed)currentIntoView();}
  trigger.addEventListener('click',()=>setCollapsed(!collapsed));close.addEventListener('click',()=>setCollapsed(true));document.addEventListener('keydown',e=>{if(e.key==='Escape'&&sidebar.contains(document.activeElement)){e.preventDefault();setCollapsed(true);}});
  sidebar.addEventListener('transitionend',e=>{if(e.propertyName==='transform'){window.dispatchEvent(new Event('resize'));currentIntoView();}});addEventListener('hb:sectionchange',()=>{sync();currentIntoView();});new MutationObserver(sync).observe(nav,{subtree:true,attributes:true,attributeFilter:['class','open']});sync();requestAnimationFrame(()=>requestAnimationFrame(()=>document.documentElement.classList.add('hw-directory-ready')));
  // Remove suffix decorations from text actions; keep arrows that are the entire control (paging, galleries).

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "current_version": "2.0.4",
+  "current_version": "2.0.5",
   "update_mode": "rss-subscription",
   "notification_mode": "reader-managed",
   "rss_url": "https://arjuntam.github.io/handbook-workshop/updates.xml",
@@ -12,6 +12,17 @@
     "watch": "https://arjuntam.github.io/handbook-workshop/AI定期检查提示词.txt"
   },
   "items": [
+    {
+      "version": "2.0.5",
+      "date": "2026-11-26",
+      "title": "收起后保留浮动目录入口",
+      "changes": [
+        "取消顶栏右侧的目录按钮。收起边栏后，在左上方显示单个浮动图标，点击重新打开；展开后浮动图标隐藏。",
+        "修正开合时焦点转移，保留文字目录、完整收起与开合动效。"
+      ],
+      "upgrade": "刷新线上页或打开新版离线样式库；兼容业务项目可另存升级公共运行文件。",
+      "boundary": "修正重新打开目录入口的可发现性，不恢复图标栏，不新增文字工具栏。旧本地版本保留。"
+    },
     {
       "version": "2.0.4",
       "date": "2026-11-26",
