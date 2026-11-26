@@ -1,0 +1,19 @@
+{
+  "profile_id": "daikin-standard-v1.3",
+  "name": "大金手册统一基准",
+  "palette": "air-blue",
+  "type_scale": "standard",
+  "logo_header_height": 28,
+  "logo_cover_height": 48,
+  "header_surface": "light",
+  "theme": {},
+  "font_family": "misans",
+  "mobile_block": true,
+  "shell_mode": "light",
+  "design_version": "2.1.0",
+  "show_update_date": true,
+  "type_scale_factor": 1,
+  "expression": "professional",
+  "custom_colors": {},
+  "custom_name": ""
+}

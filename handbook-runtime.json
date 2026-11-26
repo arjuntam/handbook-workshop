@@ -5,15 +5,31 @@
   "pages": {
     "share-demo.html": {
       "theme_file": "assets/handbook-theme-02c1b8e3b32d.css",
-      "theme_file_sha256": "092e7597ffb4f7c1d3927778f6eab3d2d58598d0e4305924b1d432e90de7c9b1",
+      "theme_file_sha256": "8c6a07645e73d4fe684bd1fc06ddfa7ee8fc8d15561f072e0147ad56d2689e9f",
       "style_file": "assets/handbook-style-02c1b8e3b32d.json",
       "style_file_sha256": "f8b8d210d49732ed6e42804865ab5f66ba2295124b5e86a0bd7dacec6b01a9d1",
       "custom_sha256": "211d7d76f04019cf6b27cd34f5ded016eb0131f5b728689a0ccd426ff0704135",
       "content_sha256": "9ec3a21503ef02b1fdd5a8660676ecfc0c7d1537822161e5c8fa386e78d02ae9"
     },
+    "视觉表达-简约阅读.html": {
+      "theme_file": "assets/handbook-theme-7267cd616f25.css",
+      "theme_file_sha256": "8c6a07645e73d4fe684bd1fc06ddfa7ee8fc8d15561f072e0147ad56d2689e9f",
+      "style_file": "assets/handbook-style-7267cd616f25.json",
+      "style_file_sha256": "f8b8d210d49732ed6e42804865ab5f66ba2295124b5e86a0bd7dacec6b01a9d1",
+      "custom_sha256": "211d7d76f04019cf6b27cd34f5ded016eb0131f5b728689a0ccd426ff0704135",
+      "content_sha256": "9998233af8f63236a7539b9dc77ca709dca5e2e5387bb7aceb04949076c97a42"
+    },
+    "视觉表达-品牌展陈.html": {
+      "theme_file": "assets/handbook-theme-5d16baefd096.css",
+      "theme_file_sha256": "f185665bca8eb30d7af433df23eb9b5a070258d2038d985b299e4998a61fc6b5",
+      "style_file": "assets/handbook-style-5d16baefd096.json",
+      "style_file_sha256": "5c68e986d28480ff438da5aff431683ffcabd651930860a8438b570e112900b1",
+      "custom_sha256": "211d7d76f04019cf6b27cd34f5ded016eb0131f5b728689a0ccd426ff0704135",
+      "content_sha256": "dddd70185219c481f6dbb10b53c8f96d188f18e1e3634e1da0faa9b3c26a432d"
+    },
     "示例招商手册.html": {
       "theme_file": "assets/handbook-theme-1aeb529204b8.css",
-      "theme_file_sha256": "092e7597ffb4f7c1d3927778f6eab3d2d58598d0e4305924b1d432e90de7c9b1",
+      "theme_file_sha256": "8c6a07645e73d4fe684bd1fc06ddfa7ee8fc8d15561f072e0147ad56d2689e9f",
       "style_file": "assets/handbook-style-1aeb529204b8.json",
       "style_file_sha256": "f8b8d210d49732ed6e42804865ab5f66ba2295124b5e86a0bd7dacec6b01a9d1",
       "custom_sha256": "211d7d76f04019cf6b27cd34f5ded016eb0131f5b728689a0ccd426ff0704135",
@@ -21,7 +37,7 @@
     },
     "示例执行手册.html": {
       "theme_file": "assets/handbook-theme-8e65f09b0337.css",
-      "theme_file_sha256": "092e7597ffb4f7c1d3927778f6eab3d2d58598d0e4305924b1d432e90de7c9b1",
+      "theme_file_sha256": "8c6a07645e73d4fe684bd1fc06ddfa7ee8fc8d15561f072e0147ad56d2689e9f",
       "style_file": "assets/handbook-style-8e65f09b0337.json",
       "style_file_sha256": "f8b8d210d49732ed6e42804865ab5f66ba2295124b5e86a0bd7dacec6b01a9d1",
       "custom_sha256": "211d7d76f04019cf6b27cd34f5ded016eb0131f5b728689a0ccd426ff0704135",
@@ -29,18 +45,18 @@
     },
     "index.html": {
       "theme_file": "assets/handbook-theme-0eb547304658.css",
-      "theme_file_sha256": "092e7597ffb4f7c1d3927778f6eab3d2d58598d0e4305924b1d432e90de7c9b1",
+      "theme_file_sha256": "8c6a07645e73d4fe684bd1fc06ddfa7ee8fc8d15561f072e0147ad56d2689e9f",
       "style_file": "assets/handbook-style-0eb547304658.json",
       "style_file_sha256": "f8b8d210d49732ed6e42804865ab5f66ba2295124b5e86a0bd7dacec6b01a9d1",
       "custom_sha256": "211d7d76f04019cf6b27cd34f5ded016eb0131f5b728689a0ccd426ff0704135",
-      "content_sha256": "4ac4c5ecb1ca8fc28b3a6c0e285f313709fee870a28feb3f573246493108c4a9"
+      "content_sha256": "77a5058bdf55d414e44552f0433fa7b2ec7dafbf8067f50246aa13e98bd926b4"
     }
   },
   "files": {
-    "assets/handbook-runtime.css": "c50baa64ec0505718f4d544e58ff2a1c3884eab1287c4c8b509f5aa2a71ac3f0",
-    "assets/handbook-runtime.js": "aee0474e1fc74bb8923e08568e5e53991df2883f85fc93b31ec566e2ba662636"
+    "assets/handbook-runtime.css": "1edc6041fc1bec045c20996161781b136cfbafc720c7494b9064a80def99cb23",
+    "assets/handbook-runtime.js": "f608cd5628f57c168f03f40d40d4a04ba9190e0e1f46a9de741f3ce46c1ce6db"
   },
-  "runtime_version": "2.0.6",
+  "runtime_version": "2.1.0",
   "style_preset": "apple",
   "font_prefix": "assets/fonts/"
 }

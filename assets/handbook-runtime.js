@@ -1,5 +1,5 @@
-/* Handbook runtime 2.0.6; API 1 */
-(()=>{if(window.HandbookRuntime)return;window.HandbookRuntime=Object.freeze({"version": "2.0.6", "api": 1});
+/* Handbook runtime 2.1.0; API 1 */
+(()=>{if(window.HandbookRuntime)return;window.HandbookRuntime=Object.freeze({"version": "2.1.0", "api": 1});
 
 (function(){
  const ua=navigator.userAgent||'';
@@ -863,6 +863,22 @@ document.querySelectorAll('.hw-chart').forEach(chart=>{chart.addEventListener('f
  function schedule(){if(!pending){pending=true;requestAnimationFrame(update);}}
  addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule);addEventListener('hb:sectionchange',schedule);document.addEventListener('click',()=>queueMicrotask(schedule));document.addEventListener('toggle',schedule,true);
  if(header)new ResizeObserver(schedule).observe(header);document.fonts?.ready.then(schedule);schedule();
+})();
+
+(()=>{
+ const root=document.documentElement,reduce=matchMedia('(prefers-reduced-motion:reduce)'),fine=matchMedia('(hover:hover) and (pointer:fine)');
+ // Migrate old expression IDs without changing business content or requiring a theme editor.
+ if(['warm','showcase'].includes(root.dataset.expression))root.dataset.expression='brand';
+ let paused=false;try{paused=localStorage.getItem('handbook-display-motion-paused')==='true';}catch(e){}
+ const animated=new WeakSet(),active=new Set(),running=new Set();
+ const targets=[...document.querySelectorAll('.hw-feature,.section .grid>.card,.hw-story-actions>.card,.hw-image-reader,.hw-chart')];
+ function allowed(){return root.dataset.expression==='brand'&&!paused&&!reduce.matches&&!document.hidden;}
+ function reveal(el){if(!allowed()||animated.has(el)||!el.getClientRects().length)return;animated.add(el);const a=el.animate([{opacity:.65,transform:'translateY(12px)'},{opacity:1,transform:'none'}],{duration:550,easing:'cubic-bezier(.22,1,.36,1)'});running.add(a);a.finished.catch(()=>{}).finally(()=>running.delete(a));}
+ function sync(){root.classList.toggle('hw-motion-paused',paused||reduce.matches);root.classList.toggle('hw-motion-hidden',document.hidden);document.querySelectorAll('.hw-expression-motion').forEach(b=>{b.textContent=reduce.matches?'已遵循减少动态设置':paused?'恢复动效':'暂停动效';b.disabled=reduce.matches;b.setAttribute('aria-pressed',String(paused||reduce.matches));});if(!allowed())running.forEach(a=>a.cancel());else active.forEach(reveal);if(!allowed())document.querySelectorAll('.hw-lit-card').forEach(c=>c.classList.remove('hw-lit-card'));}
+ document.querySelectorAll('.section').forEach(section=>{if(!section.querySelector('.hw-feature,.card,.hw-chart,.hw-image-reader'))return;const head=section.querySelector('.section-head');if(!head)return;const b=document.createElement('button');b.type='button';b.className='hw-expression-motion';b.addEventListener('click',()=>{paused=!paused;try{localStorage.setItem('handbook-display-motion-paused',String(paused));}catch(e){}sync();});head.append(b);});
+ if('IntersectionObserver' in window){const io=new IntersectionObserver(rows=>{for(const row of rows){row.target.classList.toggle('hw-in-view',row.isIntersecting);if(row.isIntersecting){active.add(row.target);reveal(row.target);}else active.delete(row.target);}},{threshold:.08});targets.forEach(el=>io.observe(el));}
+ document.querySelectorAll('.section :is(.card,.hw-track,.resource-card)').forEach(card=>{let frame=0;card.addEventListener('pointermove',e=>{if(!allowed()||!fine.matches||e.pointerType==='touch')return;cancelAnimationFrame(frame);const x=e.clientX,y=e.clientY;frame=requestAnimationFrame(()=>{const r=card.getBoundingClientRect();card.style.setProperty('--hw-light-x',(x-r.left)+'px');card.style.setProperty('--hw-light-y',(y-r.top)+'px');card.classList.add('hw-lit-card');});});card.addEventListener('pointerleave',()=>{cancelAnimationFrame(frame);card.classList.remove('hw-lit-card');});});
+ new MutationObserver(sync).observe(root,{attributes:true,attributeFilter:['data-expression']});reduce.addEventListener('change',sync);document.addEventListener('visibilitychange',sync);addEventListener('hb:sectionchange',()=>{running.forEach(a=>a.cancel());sync();});sync();
 })();
 
 })();
