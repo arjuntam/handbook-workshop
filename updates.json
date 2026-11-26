@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "current_version": "2.0.3",
+  "current_version": "2.0.4",
   "update_mode": "rss-subscription",
   "notification_mode": "reader-managed",
   "rss_url": "https://arjuntam.github.io/handbook-workshop/updates.xml",
@@ -12,6 +12,20 @@
     "watch": "https://arjuntam.github.io/handbook-workshop/AI定期检查提示词.txt"
   },
   "items": [
+    {
+      "version": "2.0.4",
+      "date": "2026-11-26",
+      "title": "文字目录、边栏开合与操作反馈",
+      "changes": [
+        "移除目录各主标题前的装饰图标；窄窗口使用同一套文字目录，收起时只保留重新展开的按钮。",
+        "二级目录收紧缩进与间距，样式编号和名称分列对齐；当前条目突出，父级仅保留文字提示。",
+        "样式库按使用与规范、内容样式、制作与协作分区；更新订阅、更新记录和已有项目升级归入版本与更新，保留原章节地址。",
+        "边栏统一为打开与完全收起，增加可中断的开合动效；不再区分宽窄窗口的图标栏/抽屉模式。",
+        "复制按钮即时显示已复制或失败，并在按钮旁提示；文字按钮移除末尾装饰箭头，必要方向控件保留。"
+      ],
+      "upgrade": "使用新版技能包；兼容旧项目可另存升级公共目录，保留原正文和日期。",
+      "boundary": "正文与章节地址保留；不自动修改旧业务页面。小窗口仍可手动收起边栏，减少动态设置时无滑动动画。"
+    },
     {
       "version": "2.0.3",
       "date": "2026-11-26",

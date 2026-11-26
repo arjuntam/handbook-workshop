@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><atom:link href="https://arjuntam.github.io/handbook-workshop/updates.xml" rel="self" type="application/rss+xml" /><title>网页手册样式库 · 更新</title><link>https://arjuntam.github.io/handbook-workshop/#updates</link><description>样式与功能的版本更新、适用范围和升级方式。</description><language>zh-CN</language><ttl>240</ttl><lastBuildDate>Thu, 26 Nov 2026 00:00:00 GMT</lastBuildDate><item><title>V2.0.3 · 一次配置RSS订阅，自动接收更新</title><link>https://arjuntam.github.io/handbook-workshop/#release-notes</link><guid isPermaLink="false">handbook-workshop-release-2.0.3</guid><description>主推“让AI配置更新订阅”，复用已有阅读器，添加正式RSS源并核对通知与后台条件。
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><atom:link href="https://arjuntam.github.io/handbook-workshop/updates.xml" rel="self" type="application/rss+xml" /><title>网页手册样式库 · 更新</title><link>https://arjuntam.github.io/handbook-workshop/#updates</link><description>样式与功能的版本更新、适用范围和升级方式。</description><language>zh-CN</language><ttl>240</ttl><lastBuildDate>Thu, 26 Nov 2026 00:00:00 GMT</lastBuildDate><item><title>V2.0.4 · 文字目录、边栏开合与操作反馈</title><link>https://arjuntam.github.io/handbook-workshop/#release-notes</link><guid isPermaLink="false">handbook-workshop-release-2.0.4</guid><description>移除目录各主标题前的装饰图标；窄窗口使用同一套文字目录，收起时只保留重新展开的按钮。
+二级目录收紧缩进与间距，样式编号和名称分列对齐；当前条目突出，父级仅保留文字提示。
+样式库按使用与规范、内容样式、制作与协作分区；更新订阅、更新记录和已有项目升级归入版本与更新，保留原章节地址。
+边栏统一为打开与完全收起，增加可中断的开合动效；不再区分宽窄窗口的图标栏/抽屉模式。
+复制按钮即时显示已复制或失败，并在按钮旁提示；文字按钮移除末尾装饰箭头，必要方向控件保留。
+升级：使用新版技能包；兼容旧项目可另存升级公共目录，保留原正文和日期。</description><pubDate>Thu, 26 Nov 2026 00:00:00 GMT</pubDate></item><item><title>V2.0.3 · 一次配置RSS订阅，自动接收更新</title><link>https://arjuntam.github.io/handbook-workshop/#release-notes</link><guid isPermaLink="false">handbook-workshop-release-2.0.3</guid><description>主推“让AI配置更新订阅”，复用已有阅读器，添加正式RSS源并核对通知与后台条件。
 新增OPML订阅配置下载；订阅成功与通知启用分别核验，不把复制提示词当成已订阅。
 收到通知后按需下载安装；一次升级与AI定期检查收进折叠区。保留投稿入口和原有更新源地址。
 升级：更新订阅栏目复制提示词给AI执行一次配置；无需维护人逐人发通知。旧业务手册不会自动改写。</description><pubDate>Thu, 26 Nov 2026 00:00:00 GMT</pubDate></item><item><title>V2.0.2 · AI自助检查更新成为主入口</title><link>https://arjuntam.github.io/handbook-workshop/#release-notes</link><guid isPermaLink="false">handbook-workshop-release-2.0.2</guid><description>将AI检查并更新工具设为推荐入口，提供可复制和下载的一次检查提示词。
