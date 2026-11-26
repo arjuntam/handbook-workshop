@@ -1,6 +1,8 @@
 {
   "navigation": [
     "使用说明",
+    "AI检查更新",
+    "贡献新样式",
     "基础规范",
     "配色、字体与字号",
     "内容样式 · 选型总览",
@@ -20,6 +22,7 @@
       "description": "写说明、讲重点、做提醒。",
       "hint": "完整解释用标准正文；一句重点用重点引语；提醒或注意事项用提示卡。",
       "types": [
+        "feature",
         "lede",
         "text",
         "h3",
@@ -30,6 +33,12 @@
         "divider"
       ],
       "styles": [
+        {
+          "id": "T09",
+          "name": "主视觉编排",
+          "scope": "章节开篇、案例成果、方法、图文、数据、区域与媒体的重点展示",
+          "section": "blk-feature"
+        },
         {
           "id": "T01",
           "name": "开篇导语",
@@ -159,6 +168,7 @@
       "description": "看数字、查明细、对比差异、展示分布。",
       "hint": "逐项比较用双栏对照；多列明细用数据表；少量核心数字用指标卡；已知城市点位用地图；比较对象并查明细用汇总详情联动。",
       "types": [
+        "chart",
         "compare",
         "table",
         "roster",
@@ -168,6 +178,36 @@
         "detail_table"
       ],
       "styles": [
+        {
+          "id": "L28-A",
+          "name": "柱状图",
+          "scope": "同口径数量比较，支持正负数和分组",
+          "section": "chart-column"
+        },
+        {
+          "id": "L28-B",
+          "name": "横向条形图",
+          "scope": "对象排名或长类别，支持全负数",
+          "section": "chart-bar"
+        },
+        {
+          "id": "L28-C",
+          "name": "折线图",
+          "scope": "连续时序变化，支持跨零与缺失点",
+          "section": "chart-line"
+        },
+        {
+          "id": "L28-D",
+          "name": "堆叠图",
+          "scope": "可相加的组成或有符号贡献",
+          "section": "chart-stacked"
+        },
+        {
+          "id": "L28-E",
+          "name": "环形与饼图",
+          "scope": "少量非负类别构成完整总体",
+          "section": "chart-donut"
+        },
         {
           "id": "L04",
           "name": "双栏对照",
@@ -322,6 +362,8 @@
       "description": "展示图片、浏览图册、打开或下载资料。",
       "hint": "一张图用原图；多张图按并列、顺序或主图选择画廊；手册入口用封面卡；下载文件用附件区；配套短录音使用录音播放条。",
       "types": [
+        "image_reader",
+        "video",
         "img",
         "imgs",
         "resources",
@@ -331,6 +373,18 @@
         "html"
       ],
       "styles": [
+        {
+          "id": "L17-D",
+          "name": "图文对读",
+          "scope": "正文解释竖图、长截图与顺序证据",
+          "section": "blk-image_reader"
+        },
+        {
+          "id": "L27",
+          "name": "视频播放卡",
+          "scope": "本地或可直接播放的HTTPS视频",
+          "section": "blk-video"
+        },
         {
           "id": "L16",
           "name": "单张原图",
@@ -442,6 +496,102 @@
     }
   ],
   "components": [
+    {
+      "id": "T09",
+      "type": "feature",
+      "name": "主视觉编排",
+      "scope": "章节开篇、案例成果、方法、图文、数据、区域与媒体的重点展示",
+      "avoid": "每段重复大标题或掩盖必要数据",
+      "interaction": "结构化静态主视觉；内部原生组件保留原有操作",
+      "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "text",
+      "category_name": "文字与重点"
+    },
+    {
+      "id": "L17-D",
+      "type": "image_reader",
+      "name": "图文对读",
+      "scope": "正文解释竖图、长截图与顺序证据",
+      "avoid": "无对应关系的拼图或截图充当背景",
+      "interaction": "竖向阅读、按宽度放大、可选慢移与速度",
+      "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "media",
+      "category_name": "图片与资料"
+    },
+    {
+      "id": "L27",
+      "type": "video",
+      "name": "视频播放卡",
+      "scope": "本地或可直接播放的HTTPS视频",
+      "avoid": "伪造播放器或默认有声自动播放",
+      "interaction": "原生播放控制、字幕、文字稿；离开章节暂停",
+      "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "media",
+      "category_name": "图片与资料"
+    },
+    {
+      "id": "L28-A",
+      "type": "chart",
+      "name": "柱状图",
+      "scope": "同口径数量比较，支持正负数和分组",
+      "avoid": "没有同口径数据或缺少来源",
+      "interaction": "数据生成SVG、键盘读数、明细表与边界状态",
+      "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "data",
+      "category_name": "数据与对照"
+    },
+    {
+      "id": "L28-B",
+      "type": "chart",
+      "name": "横向条形图",
+      "scope": "对象排名或长类别，支持全负数",
+      "avoid": "没有同口径数据或缺少来源",
+      "interaction": "数据生成SVG、键盘读数、明细表与边界状态",
+      "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "data",
+      "category_name": "数据与对照"
+    },
+    {
+      "id": "L28-C",
+      "type": "chart",
+      "name": "折线图",
+      "scope": "连续时序变化，支持跨零与缺失点",
+      "avoid": "没有同口径数据或缺少来源",
+      "interaction": "数据生成SVG、键盘读数、明细表与边界状态",
+      "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "data",
+      "category_name": "数据与对照"
+    },
+    {
+      "id": "L28-D",
+      "type": "chart",
+      "name": "堆叠图",
+      "scope": "可相加的组成或有符号贡献",
+      "avoid": "没有同口径数据或缺少来源",
+      "interaction": "数据生成SVG、键盘读数、明细表与边界状态",
+      "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "data",
+      "category_name": "数据与对照"
+    },
+    {
+      "id": "L28-E",
+      "type": "chart",
+      "name": "环形与饼图",
+      "scope": "少量非负类别构成完整总体",
+      "avoid": "没有同口径数据或缺少来源",
+      "interaction": "数据生成SVG、键盘读数、明细表与边界状态",
+      "colors": "继承同一项目样式基准；不继承 PPT 单页颜色",
+      "states": "按上述交互定义；静态块无伪造点击状态",
+      "category": "data",
+      "category_name": "数据与对照"
+    },
     {
       "id": "T01",
       "type": "lede",
@@ -1047,6 +1197,65 @@
         "T01",
         "L25",
         "A02"
+      ]
+    },
+    {
+      "id": "P11",
+      "name": "章节开篇",
+      "blocks": [
+        "T09",
+        "L21-A"
+      ]
+    },
+    {
+      "id": "P12",
+      "name": "案例成果",
+      "blocks": [
+        "T09",
+        "L08",
+        "L25"
+      ]
+    },
+    {
+      "id": "P13",
+      "name": "核心方法",
+      "blocks": [
+        "T09",
+        "L11"
+      ]
+    },
+    {
+      "id": "P14",
+      "name": "图文讲解",
+      "blocks": [
+        "T09",
+        "L17-D"
+      ]
+    },
+    {
+      "id": "P15",
+      "name": "数据判断",
+      "blocks": [
+        "T09",
+        "L28-A",
+        "L05"
+      ]
+    },
+    {
+      "id": "P16",
+      "name": "区域布局",
+      "blocks": [
+        "T09",
+        "L19"
+      ]
+    },
+    {
+      "id": "P17",
+      "name": "媒体展示",
+      "blocks": [
+        "T09",
+        "L27",
+        "L17-C"
       ]
     }
   ],

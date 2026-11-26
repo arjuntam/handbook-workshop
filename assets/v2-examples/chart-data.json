@@ -1,0 +1,50 @@
+{
+  "title": "资料中心入口点击情况（原创演示）",
+  "status": "synthetic",
+  "notice": "全部为模拟数据，仅用于模板库图表演示，不代表真实访问或经营成果。",
+  "format_notice": "这是演示数据底稿，尚未接入或定义为现有运行引擎的配置格式。",
+  "period": "2026年1月至6月",
+  "unit": "次",
+  "metric": "入口点击次数",
+  "definition": "每触发一次入口点击计一次；非去重人数。课程、案例、模板是互斥的入口类型，可在同一月份相加。",
+  "source": "原创模拟数据，无统计后台或外部数据源",
+  "monthly": [
+    {"month": "2026-01", "courses": 60, "cases": 70, "templates": 50, "total": 180},
+    {"month": "2026-02", "courses": 80, "cases": 90, "templates": 50, "total": 220},
+    {"month": "2026-03", "courses": 70, "cases": 80, "templates": 60, "total": 210},
+    {"month": "2026-04", "courses": 90, "cases": 100, "templates": 70, "total": 260},
+    {"month": "2026-05", "courses": 110, "cases": 100, "templates": 90, "total": 300},
+    {"month": "2026-06", "courses": 120, "cases": 130, "templates": 80, "total": 330}
+  ],
+  "totals": {"courses": 530, "cases": 570, "templates": 400, "all": 1500},
+  "series_labels": {"courses": "课程入口", "cases": "案例入口", "templates": "模板入口"},
+  "chart_uses": [
+    {"type": "column", "question": "各月点击次数有什么差别？", "data": "monthly.total"},
+    {"type": "bar", "question": "哪类入口的累计点击次数最多？", "data": "totals中的三个入口分类，不将all重复作为分类"},
+    {"type": "line", "question": "点击次数随月份怎样变化？", "data": "monthly.total或三个独立系列"},
+    {"type": "stacked", "question": "每个月的总量由哪些入口组成？", "data": "monthly中的courses、cases、templates，不把total再次堆叠"},
+    {"type": "donut", "question": "三类入口在半年点击总量中各占多少？", "data": "totals中的三个分类", "denominator": 1500}
+  ],
+  "summary": "在这组模拟数据中，6月为展示期间最高值，3月较2月下降；半年案例入口累计点击次数最多。",
+  "edge_cases": {
+    "empty": [],
+    "zero": [{"label": "示例甲", "value": 0}, {"label": "示例乙", "value": 0}],
+    "missing_line": [{"month": "2026-01", "value": 10}, {"month": "2026-02", "value": null}, {"month": "2026-03", "value": 15}],
+    "signed_bar": {"metric": "模拟数量净变化", "unit": "份", "values": [{"label": "示例甲", "value": -3}, {"label": "示例乙", "value": 5}]},
+    "negative_only": {"metric": "模拟数量净变化", "unit": "份", "values": [{"label": "示例甲", "value": -2}, {"label": "示例乙", "value": -7}, {"label": "示例丙", "value": -1}]},
+    "cross_zero_line": {"metric": "模拟数量净变化", "unit": "份", "values": [{"month": "2026-01", "value": -4}, {"month": "2026-02", "value": 0}, {"month": "2026-03", "value": 6}, {"month": "2026-04", "value": null}, {"month": "2026-05", "value": -2}]},
+    "signed_decimal": {"metric": "模拟变化率", "unit": "%", "values": [{"label": "示例甲", "value": -12.5}, {"label": "示例乙", "value": 8.2}, {"label": "示例丙", "value": 0}], "note": "这是有正负的变化率，只用于适用的柱、条、折线，不作为组成占比。"},
+    "diverging_stack": {
+      "metric": "模拟资料数量变化贡献",
+      "unit": "份",
+      "definition": "同一期内互不重叠的新增、撤回与修订净变化，可相加为总净变化；这是模拟变化贡献，不是最终库存数量。",
+      "periods": [
+        {"period": "示例期甲", "changes": {"new": 8, "withdrawals": -5, "corrections": -1}, "positive_sum": 8, "negative_sum": -6, "net": 2},
+        {"period": "示例期乙", "changes": {"new": 3, "withdrawals": -7, "corrections": 0}, "positive_sum": 3, "negative_sum": -7, "net": -4},
+        {"period": "示例期丙", "changes": {"new": 5, "withdrawals": -5, "corrections": 0}, "positive_sum": 5, "negative_sum": -5, "net": 0}
+      ]
+    },
+    "invalid_composition": {"values": [{"label": "示例甲", "value": 10}, {"label": "示例乙", "value": -5}], "applies_to": ["donut", "pie", "percent_stacked"], "expected": "明确提示组成模式不支持负值，保留数据；建议改用条形图或普通正负堆叠，不静默取绝对值。"},
+    "notes": "全部为独立的模拟边界样例，不能合并进主场景的入口点击次数。缺失值不是零；全零环形图显示无可计算占比；正负值样例只用于适用图表。"
+  }
+}
