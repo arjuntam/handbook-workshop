@@ -1,5 +1,5 @@
-/* Handbook runtime 2.1.1; API 1 */
-(()=>{if(window.HandbookRuntime)return;window.HandbookRuntime=Object.freeze({"version": "2.1.1", "api": 1});
+/* Handbook runtime 2.1.2; API 1 */
+(()=>{if(window.HandbookRuntime)return;window.HandbookRuntime=Object.freeze({"version": "2.1.2", "api": 1});
 
 (function(){
  const ua=navigator.userAgent||'';
@@ -877,7 +877,7 @@ document.querySelectorAll('.hw-chart').forEach(chart=>{chart.addEventListener('f
  function sync(){root.classList.toggle('hw-motion-paused',paused||reduce.matches);root.classList.toggle('hw-motion-hidden',document.hidden);document.querySelectorAll('.hw-expression-motion').forEach(b=>{b.textContent=reduce.matches?'已遵循减少动态设置':paused?'恢复动效':'暂停动效';b.disabled=reduce.matches;b.setAttribute('aria-pressed',String(paused||reduce.matches));});if(!allowed())running.forEach(a=>a.cancel());else active.forEach(reveal);if(!allowed())document.querySelectorAll('.hw-lit-card').forEach(c=>c.classList.remove('hw-lit-card'));}
  document.querySelectorAll('.section').forEach(section=>{if(!section.querySelector('.hw-feature,.card,.hw-chart,.hw-image-reader'))return;const head=section.querySelector('.section-head');if(!head)return;const b=document.createElement('button');b.type='button';b.className='hw-expression-motion';b.addEventListener('click',()=>{paused=!paused;try{localStorage.setItem('handbook-display-motion-paused',String(paused));}catch(e){}sync();});head.append(b);});
  if('IntersectionObserver' in window){const io=new IntersectionObserver(rows=>{for(const row of rows){row.target.classList.toggle('hw-in-view',row.isIntersecting);if(row.isIntersecting){active.add(row.target);reveal(row.target);}else active.delete(row.target);}},{threshold:.08});targets.forEach(el=>io.observe(el));}
- document.querySelectorAll('.section :is(.card,.hw-track,.resource-card)').forEach(card=>{let frame=0;card.addEventListener('pointermove',e=>{if(!allowed()||!fine.matches||e.pointerType==='touch')return;cancelAnimationFrame(frame);const x=e.clientX,y=e.clientY;frame=requestAnimationFrame(()=>{const r=card.getBoundingClientRect();card.style.setProperty('--hw-light-x',(x-r.left)+'px');card.style.setProperty('--hw-light-y',(y-r.top)+'px');card.classList.add('hw-lit-card');});});card.addEventListener('pointerleave',()=>{cancelAnimationFrame(frame);card.classList.remove('hw-lit-card');});});
+ document.querySelectorAll('.section :is(.card,.hw-track,.resource-card)').forEach(card=>{let frame=0;card.addEventListener('pointermove',e=>{if(!allowed()||!fine.matches||e.pointerType==='touch')return;cancelAnimationFrame(frame);const x=e.clientX,y=e.clientY;frame=requestAnimationFrame(()=>{if(!allowed()||!fine.matches||!card.isConnected||!card.getClientRects().length)return;const r=card.getBoundingClientRect();card.style.setProperty('--hw-light-x',(x-r.left)+'px');card.style.setProperty('--hw-light-y',(y-r.top)+'px');card.classList.add('hw-lit-card');});});card.addEventListener('pointerleave',()=>{cancelAnimationFrame(frame);card.classList.remove('hw-lit-card');});});
  new MutationObserver(sync).observe(root,{attributes:true,attributeFilter:['data-expression']});reduce.addEventListener('change',sync);document.addEventListener('visibilitychange',sync);addEventListener('hb:sectionchange',()=>{running.forEach(a=>a.cancel());sync();});sync();
 })();
 

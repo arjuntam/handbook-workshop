@@ -1,18 +1,18 @@
 {
-  "version": "2.1.1",
+  "version": "2.1.2",
   "package": {
-    "path": "downloads/handbook-workshop-lite-v2.1.1.zip",
+    "path": "downloads/handbook-workshop-lite-v2.1.2.zip",
     "flavor": "lite",
-    "bytes": 2052987,
-    "sha256": "4b67468b26e49274c1fa7fcb90251ee23471819549e8a5f6f67cd4b0d4123240",
+    "bytes": 2054187,
+    "sha256": "7ecdefc6da0d43c54e4c087c125408647b8d47131de562f400c4d432ee1b33b5",
     "upload_limit_bytes": 5242880,
     "initial_font_download": true
   },
   "offline_package": {
-    "path": "downloads/handbook-workshop-full-v2.1.1.zip",
+    "path": "downloads/handbook-workshop-full-v2.1.2.zip",
     "flavor": "full",
-    "bytes": 51019495,
-    "sha256": "2a33a5f72987c050b26fc03dea022826b62ab4d85a65568343c3f5e7d6b55f90"
+    "bytes": 51023698,
+    "sha256": "498a2c4143bcf50800f389c9f501570f71e84ee9adaf043e8ae006b5c189fabd"
   },
   "resource_reuse": {
     "shared_media": 26,

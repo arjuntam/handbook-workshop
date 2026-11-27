@@ -5,7 +5,7 @@
   "pages": {
     "share-demo.html": {
       "theme_file": "assets/handbook-theme-02c1b8e3b32d.css",
-      "theme_file_sha256": "8c6a07645e73d4fe684bd1fc06ddfa7ee8fc8d15561f072e0147ad56d2689e9f",
+      "theme_file_sha256": "57d44a93fde215e9d237b40f40e7c343f4c189bd5a81a26c39e14784f077354d",
       "style_file": "assets/handbook-style-02c1b8e3b32d.json",
       "style_file_sha256": "f8b8d210d49732ed6e42804865ab5f66ba2295124b5e86a0bd7dacec6b01a9d1",
       "custom_sha256": "211d7d76f04019cf6b27cd34f5ded016eb0131f5b728689a0ccd426ff0704135",
@@ -13,7 +13,7 @@
     },
     "视觉表达-简约阅读.html": {
       "theme_file": "assets/handbook-theme-7267cd616f25.css",
-      "theme_file_sha256": "8c6a07645e73d4fe684bd1fc06ddfa7ee8fc8d15561f072e0147ad56d2689e9f",
+      "theme_file_sha256": "57d44a93fde215e9d237b40f40e7c343f4c189bd5a81a26c39e14784f077354d",
       "style_file": "assets/handbook-style-7267cd616f25.json",
       "style_file_sha256": "f8b8d210d49732ed6e42804865ab5f66ba2295124b5e86a0bd7dacec6b01a9d1",
       "custom_sha256": "211d7d76f04019cf6b27cd34f5ded016eb0131f5b728689a0ccd426ff0704135",
@@ -21,7 +21,7 @@
     },
     "视觉表达-品牌展陈.html": {
       "theme_file": "assets/handbook-theme-5d16baefd096.css",
-      "theme_file_sha256": "f185665bca8eb30d7af433df23eb9b5a070258d2038d985b299e4998a61fc6b5",
+      "theme_file_sha256": "8a2c8468f2ffd564edeb69bfe997a6b3840b5b48158581251d3e060147cd4327",
       "style_file": "assets/handbook-style-5d16baefd096.json",
       "style_file_sha256": "5c68e986d28480ff438da5aff431683ffcabd651930860a8438b570e112900b1",
       "custom_sha256": "211d7d76f04019cf6b27cd34f5ded016eb0131f5b728689a0ccd426ff0704135",
@@ -29,7 +29,7 @@
     },
     "示例招商手册.html": {
       "theme_file": "assets/handbook-theme-1aeb529204b8.css",
-      "theme_file_sha256": "8c6a07645e73d4fe684bd1fc06ddfa7ee8fc8d15561f072e0147ad56d2689e9f",
+      "theme_file_sha256": "57d44a93fde215e9d237b40f40e7c343f4c189bd5a81a26c39e14784f077354d",
       "style_file": "assets/handbook-style-1aeb529204b8.json",
       "style_file_sha256": "f8b8d210d49732ed6e42804865ab5f66ba2295124b5e86a0bd7dacec6b01a9d1",
       "custom_sha256": "211d7d76f04019cf6b27cd34f5ded016eb0131f5b728689a0ccd426ff0704135",
@@ -37,7 +37,7 @@
     },
     "示例执行手册.html": {
       "theme_file": "assets/handbook-theme-8e65f09b0337.css",
-      "theme_file_sha256": "8c6a07645e73d4fe684bd1fc06ddfa7ee8fc8d15561f072e0147ad56d2689e9f",
+      "theme_file_sha256": "57d44a93fde215e9d237b40f40e7c343f4c189bd5a81a26c39e14784f077354d",
       "style_file": "assets/handbook-style-8e65f09b0337.json",
       "style_file_sha256": "f8b8d210d49732ed6e42804865ab5f66ba2295124b5e86a0bd7dacec6b01a9d1",
       "custom_sha256": "211d7d76f04019cf6b27cd34f5ded016eb0131f5b728689a0ccd426ff0704135",
@@ -45,18 +45,18 @@
     },
     "index.html": {
       "theme_file": "assets/handbook-theme-0eb547304658.css",
-      "theme_file_sha256": "8c6a07645e73d4fe684bd1fc06ddfa7ee8fc8d15561f072e0147ad56d2689e9f",
+      "theme_file_sha256": "57d44a93fde215e9d237b40f40e7c343f4c189bd5a81a26c39e14784f077354d",
       "style_file": "assets/handbook-style-0eb547304658.json",
       "style_file_sha256": "f8b8d210d49732ed6e42804865ab5f66ba2295124b5e86a0bd7dacec6b01a9d1",
       "custom_sha256": "211d7d76f04019cf6b27cd34f5ded016eb0131f5b728689a0ccd426ff0704135",
-      "content_sha256": "710f3ceb204a0ad44dbb5d5b9e46270440d16de53a2a53cdd601e5d0c8898413"
+      "content_sha256": "adb4c3e753efd8638a422ae093a379ba77686cdbb7a63d35829b7056b67d88a0"
     }
   },
   "files": {
-    "assets/handbook-runtime.css": "1edc6041fc1bec045c20996161781b136cfbafc720c7494b9064a80def99cb23",
-    "assets/handbook-runtime.js": "742079018ef72728595a889170e7ba3d9eb3f28693c93182b7cf3205d8228951"
+    "assets/handbook-runtime.css": "a11c7d8700700c7e826805c0d59742d137d4774b88a865fbe4a0ad511378879e",
+    "assets/handbook-runtime.js": "e8d1b9b3b103d6f7ac394c7421cdd1719d504c1da48ce415ba138da857ce4018"
   },
-  "runtime_version": "2.1.1",
+  "runtime_version": "2.1.2",
   "style_preset": "apple",
   "font_prefix": "assets/fonts/"
 }
