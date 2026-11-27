@@ -2,7 +2,7 @@
 
 样式库 V2.1.2 · 设计者：吖君 · 更新日期：2026-11-27
 
-[样式库与技能包下载](https://arjuntam.github.io/handbook-workshop/)
+[样式库与技能包下载](https://arjuntam.github.io/handbook-workshop/) · [国内镜像（飞书托管，无需登录）](https://oxfryhycn2.feishuapp.com/app/app_17jv38nusg0/)
 
 V2.1.2：补齐品牌展陈01主行动卡的静态柔光、数字柔光与悬停聚光，修正实色底覆盖光层和同色叠加不可见的问题。光色从主色生成并约束白字对比度；暂停和减少动态保留静态层次，打印与高对比模式移除装饰。
 
