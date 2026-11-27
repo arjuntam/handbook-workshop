@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "current_version": "2.1.0",
+  "current_version": "2.1.1",
   "update_mode": "rss-subscription",
   "notification_mode": "reader-managed",
   "rss_url": "https://arjuntam.github.io/handbook-workshop/updates.xml",
@@ -12,6 +12,19 @@
     "watch": "https://arjuntam.github.io/handbook-workshop/AI定期检查提示词.txt"
   },
   "items": [
+    {
+      "version": "2.1.1",
+      "date": "2026-11-27",
+      "title": "让主题风格看得见：缩略对比与悬停说明",
+      "changes": [
+        "配色页增加选配色、选主题风格、保存方案三个明确入口，颜色和风格可独立选择。",
+        "两套风格改为同内容对比卡，缩略图随当前主色变化；展示适用场景和当前选用状态。",
+        "鼠标停留或键盘聚焦可放大查看版式与详细说明，预览不改变选择，点击才应用。",
+        "预览组件按需使用本地兼容脚本，保留完整示例入口、离线使用与减少动态设置。"
+      ],
+      "upgrade": "刷新线上样式库或使用新版离线包。已有业务页的表达与内容无需改动。",
+      "boundary": "只改制作人的风格选择界面，不给成品读者增加换色或风格切换工具。"
+    },
     {
       "version": "2.1.0",
       "date": "2026-11-26",

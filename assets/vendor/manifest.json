@@ -1,0 +1,20 @@
+[
+  {
+    "package": "interestfor",
+    "version": "1.0.14",
+    "license": "BSD-3-Clause",
+    "file": "interestfor.min.js",
+    "sha256": "0d00d93bd0f3acb4a8bcd1470e8e034e29f39ec1d740b29673c91a2f6f1cd171",
+    "source": "https://www.npmjs.com/package/interestfor",
+    "license_file": "interestfor-LICENSE.txt"
+  },
+  {
+    "package": "@oddbird/popover-polyfill",
+    "version": "0.7.3",
+    "license": "BSD-3-Clause",
+    "file": "popover-polyfill.min.js",
+    "sha256": "e1fc9455a843ab70b4182a6ca6903eee97959b869f2c991a87b18b5b1eac76fd",
+    "source": "https://www.npmjs.com/package/@oddbird/popover-polyfill",
+    "license_file": "popover-polyfill-LICENSE.txt"
+  }
+]

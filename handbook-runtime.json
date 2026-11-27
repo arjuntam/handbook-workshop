@@ -9,7 +9,7 @@
       "style_file": "assets/handbook-style-02c1b8e3b32d.json",
       "style_file_sha256": "f8b8d210d49732ed6e42804865ab5f66ba2295124b5e86a0bd7dacec6b01a9d1",
       "custom_sha256": "211d7d76f04019cf6b27cd34f5ded016eb0131f5b728689a0ccd426ff0704135",
-      "content_sha256": "9ec3a21503ef02b1fdd5a8660676ecfc0c7d1537822161e5c8fa386e78d02ae9"
+      "content_sha256": "66b430c0a46b18d24488651c2f5361c3dfb66a54577cfc3b6c6fe9dfbb105090"
     },
     "视觉表达-简约阅读.html": {
       "theme_file": "assets/handbook-theme-7267cd616f25.css",
@@ -33,7 +33,7 @@
       "style_file": "assets/handbook-style-1aeb529204b8.json",
       "style_file_sha256": "f8b8d210d49732ed6e42804865ab5f66ba2295124b5e86a0bd7dacec6b01a9d1",
       "custom_sha256": "211d7d76f04019cf6b27cd34f5ded016eb0131f5b728689a0ccd426ff0704135",
-      "content_sha256": "639b5cf96fcd33af117b8c6e7b297f7bb472c5352a43ce98127242ad8ae5859e"
+      "content_sha256": "63a5c485e67532609f86c327554019a0e3f9f94f55d012401bab026a77f7781f"
     },
     "示例执行手册.html": {
       "theme_file": "assets/handbook-theme-8e65f09b0337.css",
@@ -41,7 +41,7 @@
       "style_file": "assets/handbook-style-8e65f09b0337.json",
       "style_file_sha256": "f8b8d210d49732ed6e42804865ab5f66ba2295124b5e86a0bd7dacec6b01a9d1",
       "custom_sha256": "211d7d76f04019cf6b27cd34f5ded016eb0131f5b728689a0ccd426ff0704135",
-      "content_sha256": "639b5cf96fcd33af117b8c6e7b297f7bb472c5352a43ce98127242ad8ae5859e"
+      "content_sha256": "63a5c485e67532609f86c327554019a0e3f9f94f55d012401bab026a77f7781f"
     },
     "index.html": {
       "theme_file": "assets/handbook-theme-0eb547304658.css",
@@ -49,14 +49,14 @@
       "style_file": "assets/handbook-style-0eb547304658.json",
       "style_file_sha256": "f8b8d210d49732ed6e42804865ab5f66ba2295124b5e86a0bd7dacec6b01a9d1",
       "custom_sha256": "211d7d76f04019cf6b27cd34f5ded016eb0131f5b728689a0ccd426ff0704135",
-      "content_sha256": "77a5058bdf55d414e44552f0433fa7b2ec7dafbf8067f50246aa13e98bd926b4"
+      "content_sha256": "710f3ceb204a0ad44dbb5d5b9e46270440d16de53a2a53cdd601e5d0c8898413"
     }
   },
   "files": {
     "assets/handbook-runtime.css": "1edc6041fc1bec045c20996161781b136cfbafc720c7494b9064a80def99cb23",
-    "assets/handbook-runtime.js": "f608cd5628f57c168f03f40d40d4a04ba9190e0e1f46a9de741f3ce46c1ce6db"
+    "assets/handbook-runtime.js": "742079018ef72728595a889170e7ba3d9eb3f28693c93182b7cf3205d8228951"
   },
-  "runtime_version": "2.1.0",
+  "runtime_version": "2.1.1",
   "style_preset": "apple",
   "font_prefix": "assets/fonts/"
 }

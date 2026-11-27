@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><atom:link href="https://arjuntam.github.io/handbook-workshop/updates.xml" rel="self" type="application/rss+xml" /><title>网页手册样式库 · 更新</title><link>https://arjuntam.github.io/handbook-workshop/#updates</link><description>样式与功能的版本更新、适用范围和升级方式。</description><language>zh-CN</language><ttl>240</ttl><lastBuildDate>Thu, 26 Nov 2026 00:00:00 GMT</lastBuildDate><item><title>V2.1.0 · 两套整库视觉表达：简约阅读与品牌展陈</title><link>https://arjuntam.github.io/handbook-workshop/#release-notes</link><guid isPermaLink="false">handbook-workshop-release-2.1.0</guid><description>原有三种表达收敛为两套，共用全部样式编号和交互；旧配置可导入并归入品牌展陈。
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><atom:link href="https://arjuntam.github.io/handbook-workshop/updates.xml" rel="self" type="application/rss+xml" /><title>网页手册样式库 · 更新</title><link>https://arjuntam.github.io/handbook-workshop/#updates</link><description>样式与功能的版本更新、适用范围和升级方式。</description><language>zh-CN</language><ttl>240</ttl><lastBuildDate>Fri, 27 Nov 2026 00:00:00 GMT</lastBuildDate><item><title>V2.1.1 · 让主题风格看得见：缩略对比与悬停说明</title><link>https://arjuntam.github.io/handbook-workshop/#release-notes</link><guid isPermaLink="false">handbook-workshop-release-2.1.1</guid><description>配色页增加选配色、选主题风格、保存方案三个明确入口，颜色和风格可独立选择。
+两套风格改为同内容对比卡，缩略图随当前主色变化；展示适用场景和当前选用状态。
+鼠标停留或键盘聚焦可放大查看版式与详细说明，预览不改变选择，点击才应用。
+预览组件按需使用本地兼容脚本，保留完整示例入口、离线使用与减少动态设置。
+升级：刷新线上样式库或使用新版离线包。已有业务页的表达与内容无需改动。</description><pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate></item><item><title>V2.1.0 · 两套整库视觉表达：简约阅读与品牌展陈</title><link>https://arjuntam.github.io/handbook-workshop/#release-notes</link><guid isPermaLink="false">handbook-workshop-release-2.1.0</guid><description>原有三种表达收敛为两套，共用全部样式编号和交互；旧配置可导入并归入品牌展陈。
 品牌展陈增加主色延伸的浅底、光感、无框层次及受限阅读宽度；目录保持左对齐、完整开合和浮动重开入口。
 新增照片渐变压底配置和会议开篇、行动卡、长文表格完整示例；截图、图表默认完整显示。
 补充可暂停的环境光、一次入场和局部悬停光感；减少动态、页面隐藏和离开章节时停止。
